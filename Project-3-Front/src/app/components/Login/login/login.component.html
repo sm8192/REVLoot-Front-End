@@ -10,17 +10,15 @@
     <form #registerForm="ngForm" (submit)="onSubmit(registerForm)" >
         <div class="col form-group offset-md-3">
             <label for="">Email:</label>
-            <input type="text" name="email" class="form-control" pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$" style="width: 300px;" ngModel #email="ngModel" [class.is.invalid]="email.invalid && email.touched" required  />
-            <div *ngIf="email.errors && (email.invalid || email.touched)">
-                <small class="text-danger" *ngIf="email.errors['required']">*This is required field</small>
-                <small class="text-danger" *ngIf="email.errors['pattern']">*This is not a valid email</small>
-              </div>
+            <input type="email" name="email" class="form-control" pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$" style="width: 300px;" ngModel #email="ngModel" [class.is-invalid]="email.invalid && email.touched" required  />
+            <small class="invalid-feedback text-danger" *ngIf="email.errors?.['required']">*This is a required field</small>
+            <small class="invalid-feedback text-danger" *ngIf="email.errors?.['pattern']">*This is not a valid email</small>
         </div>
     
         <div class="col form-group offset-md-3">
             <label for="">Password:</label>
-            <input type="password" name="password" class="form-control" style="width: 300px;" ngModel #password="ngModel" [class.is.invalid]="password.invalid && password.touched" required />
-            <small class="text-danger" [class.d-none]="password.untouched || password.valid">*This is required field</small>
+            <input type="password" name="password" class="form-control" style="width: 300px;" ngModel #password="ngModel" [class.is-invalid]="password.invalid && password.touched" required />
+            <small class="invalid-feedback text-danger" [class.d-none]="password.untouched || password.valid">*This is required field</small>
         </div>
     
         <div class="col form-group offset-md-3">
