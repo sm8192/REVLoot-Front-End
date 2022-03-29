@@ -1,37 +1,39 @@
+
 <div class="container">
     <div class="row justify-content-md-center">
     <div class="col-md-6">
     <div class="card">
     
     <header class="card-header">
-        <a routerLink="../" class="btn btn-outline-primary mt-1" style="float: right;">Log in</a>
+        <a routerLink="../login" class="btn btn-outline-primary mt-1" style="float: right;">Log in</a>
         <h4 class="card-title mt-2">Register</h4>
     </header>
     <div class="card-body ">
     <form #registerForm="ngForm" (submit)="onSubmit(registerForm)" >
         <div class="col form-group offset-md-3">
             <label for="" >First Name:</label>
-            <input type="text" name="firstName" class="form-control" style="width: 200px;" ngModel #firstName="ngModel" [class.is.invlaid]="firstName.invalid && firstName.touched" required />
-            <small class="text-danger" [class.d-none]="firstName.untouched || firstName.valid">*This is required field</small>
+            <input type="text" name="firstName" class="form-control" style="width: 200px;" ngModel #firstName="ngModel" [class.is-invalid]="firstName.invalid && firstName.touched" required />
+            <small class="invalid-feedback text-danger" [class.d-none]="firstName.untouched || firstName.valid">*This is a required field</small>
         </div>
     
         <div class="col form-group offset-md-3">
             <label for="">Last Name:</label>
-            <input type="text" name="lastName" class="form-control" style="width: 200px;" ngModel #lastName="ngModel" [class.is.invlaid]="lastName.invalid && lastName.touched" required />
-            <small class="text-danger" [class.d-none]="lastName.untouched || lastName.valid">*This is required field</small>
+            <input type="text" name="lastName" class="form-control" style="width: 200px;" ngModel #lastName="ngModel" [class.is-invalid]="lastName.invalid && lastName.touched" required />
+            <small class="invalid-feedback text-danger" [class.d-none]="lastName.untouched || lastName.valid">*This is a required field</small>
         </div>
     
     
         <div class="col form-group offset-md-3">
             <label for="">Email:</label>
-            <input type="text" name="email" class="form-control" style="width: 300px;" ngModel #email="ngModel" [class.is.invlaid]="email.invalid && email.touched" required  />
-            <small class="text-danger" [class.d-none]="email.untouched || email.valid">*This is required field</small>
+            <input type="email" name="email" class="form-control" pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$" style="width: 300px;" ngModel #email="ngModel" [class.is-invalid]="email.invalid && email.touched" required />
+            <small class="invalid-feedback text-danger" *ngIf="email.errors?.['required']">*This is a required field</small>
+            <small class="invalid-feedback text-danger" *ngIf="email.errors?.['pattern']">*This is not a valid email</small>
         </div>
     
         <div class="col form-group offset-md-3">
             <label for="">Password:</label>
-            <input type="text" name="password" class="form-control" style="width: 200px;" ngModel #password="ngModel" [class.is.invlaid]="password.invalid && password.touched" required />
-            <small class="text-danger" [class.d-none]="password.untouched || password.valid">*This is required field</small>
+            <input type="password" name="password" class="form-control" style="width: 200px;" ngModel #password="ngModel" [class.is-invalid]="password.invalid && password.touched" required />
+            <small class="invalid-feedback text-danger" [class.d-none]="password.untouched || password.valid">*This is a required field</small>
         </div>
     
         <div class="col form-group offset-md-3">

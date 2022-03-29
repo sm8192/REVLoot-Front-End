@@ -7,24 +7,25 @@
         <h4 class="card-title">Sign in</h4>
     </header>
     <div class="card-body ">
-    <form #loginForm="ngForm" (submit)="onSubmit(loginForm)" >
+    <form #registerForm="ngForm" (submit)="onSubmit(registerForm)" >
         <div class="col form-group offset-md-3">
             <label for="">Email:</label>
-            <input type="text" name="email" class="form-control" style="width: 300px;" ngModel #email="ngModel" [class.is.invalid]="email.invalid && email.touched" required  />
-            <small class="text-danger" [class.d-none]="email.untouched || email.valid">*This is required field</small>
+            <input type="email" name="email" class="form-control" pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$" style="width: 300px;" ngModel #email="ngModel" [class.is-invalid]="email.invalid && email.touched" required  />
+            <small class="invalid-feedback text-danger" *ngIf="email.errors?.['required']">*This is a required field</small>
+            <small class="invalid-feedback text-danger" *ngIf="email.errors?.['pattern']">*This is not a valid email</small>
         </div>
     
         <div class="col form-group offset-md-3">
             <label for="">Password:</label>
-            <input type="text" name="password" class="form-control" style="width: 200px;" ngModel #password="ngModel" [class.is.invalid]="password.invalid && password.touched" required />
-            <small class="text-danger" [class.d-none]="password.untouched || password.valid">*This is required field</small>
+            <input type="password" name="password" class="form-control" style="width: 300px;" ngModel #password="ngModel" [class.is-invalid]="password.invalid && password.touched" required />
+            <small class="invalid-feedback text-danger" [class.d-none]="password.untouched || password.valid">*This is required field</small>
         </div>
     
         <div class="col form-group offset-md-3">
-            <button [disabled]="loginForm.invalid" type="submit" class="btn btn-primary btn-block" style="margin-left:15%; margin-top: 10px;"> Sign in  </button>        
+            <button [disabled]="registerForm.invalid" type="submit" class="btn btn-primary btn-block" style="margin-left:15%; margin-top: 10px; margin-bottom: 10px;"> Sign in  </button>        
         </div>
     </form>
-    <div class="border-top card-body text-center">Dont have an account? <a routerLink="../">Sign up</a></div>
+    <div class="border-top card-body text-center">Dont have an account? <a routerLink="/register">Sign up</a></div>
     </div>
     </div>
     </div>
