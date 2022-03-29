@@ -12,7 +12,7 @@
             <label for="">Email:</label>
             <input type="text" name="email" class="form-control" pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$" style="width: 300px;" ngModel #email="ngModel" [class.is.invalid]="email.invalid && email.touched" required  />
             <div *ngIf="email.errors && (email.invalid || email.touched)">
-                <small class="text-danger" *ngIf="email.errors['required']">*This is required field</small>
+                <small [class.d-none]="email.untouched || email.valid" class="text-danger" *ngIf="email.errors['required']">*This is required field</small>
                 <small class="text-danger" *ngIf="email.errors['pattern']">*This is not a valid email</small>
               </div>
         </div>
