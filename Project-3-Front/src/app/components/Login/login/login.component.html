@@ -4,10 +4,10 @@
     <div class="card">
     
     <header class="card-header">
-        <h4 class="card-title mt-2">Sign in</h4>
+        <h4 class="card-title">Sign in</h4>
     </header>
     <div class="card-body ">
-    <form #registerForm="ngForm" (submit)="onSubmit(registerForm)" >
+    <form #loginForm="ngForm" (submit)="onSubmit(loginForm)" >
         <div class="col form-group offset-md-3">
             <label for="">Email:</label>
             <input type="text" name="email" class="form-control" style="width: 300px;" ngModel #email="ngModel" [class.is.invalid]="email.invalid && email.touched" required  />
@@ -21,7 +21,7 @@
         </div>
     
         <div class="col form-group offset-md-3">
-            <button [disabled]="registerForm.invalid" type="submit" class="btn btn-primary btn-block" style="margin-left:15%; margin-top: 10px;"> Sign in  </button>        
+            <button [disabled]="loginForm.invalid" type="submit" class="btn btn-primary btn-block" style="margin-left:15%; margin-top: 10px;"> Sign in  </button>        
         </div>
     </form>
     <div class="border-top card-body text-center">Dont have an account? <a routerLink="../">Sign up</a></div>
