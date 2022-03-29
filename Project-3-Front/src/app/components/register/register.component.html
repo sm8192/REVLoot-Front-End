@@ -1,0 +1,40 @@
+<div class="container">
+    <div class="card">
+    
+    <h2 class="card-header">Register</h2>
+    <div class="card-body">
+    <form #registerForm="ngForm" (submit)="onSubmit(registerForm)" >
+        <div class="form-group">
+            <label for="" >First Name:</label>
+            <input type="text" name="firstName" class="form-control" ngModel #firstName="ngModel" [class.is.invlaid]="firstName.invalid && firstName.touched" required />
+            <small class="text-danger" [class.d-none]="firstName.untouched || firstName.valid">*This is required field</small>
+        </div>
+    
+        <div class="form-group">
+            <label for="">Last Name:</label>
+            <input type="text" name="lastName" class="form-control" ngModel #lastName="ngModel" [class.is.invlaid]="lastName.invalid && lastName.touched" required />
+            <small class="text-danger" [class.d-none]="lastName.untouched || lastName.valid">*This is required field</small>
+        </div>
+    
+    
+        <div class="form-group">
+            <label for="">Email:</label>
+            <input type="text" name="email" class="form-control" ngModel #email="ngModel" [class.is.invlaid]="email.invalid && email.touched" required  />
+            <small class="text-danger" [class.d-none]="email.untouched || email.valid">*This is required field</small>
+        </div>
+    
+        <div class="form-group">
+            <label for="">Password:</label>
+            <input type="text" name="password" class="form-control" ngModel #password="ngModel" [class.is.invlaid]="password.invalid && password.touched" required />
+            <small class="text-danger" [class.d-none]="password.untouched || password.valid">*This is required field</small>
+        </div>
+    
+        <div class="form-group">
+           <input [disabled]="registerForm.invalid" class="btn btn-primary" value="Register"  />
+        
+    </div>
+    </form>
+    </div>
+    </div>
+    </div>
+    
