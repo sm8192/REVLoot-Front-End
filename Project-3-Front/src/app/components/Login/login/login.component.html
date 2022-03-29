@@ -1,44 +1,32 @@
-<!DOCTYPE html>
-<html lang="en">
- <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
- <style>
-.card{
-    margin: 0 auto; /* Added */
-    float: none; /* Added */
-    margin-bottom: 10px; /* Added */
-}
-
- </style> 
+<div class="container">
+    <div class="row justify-content-md-center">
+    <div class="col-md-6">
+    <div class="card">
     
-
-
-</head>
-<body id="">
-    <div class="container">
-        <div class="card" style="height: 500px">
-            <div class="card-header">
-<h1>Login</h1>
-</div>
-<form >
-<div>
-    <label for="">Email</label><br>
-    <input type="text"class="email"id=""  name="username">
-</div>
-<div>
-    <label for="">Password</label><br>
-    <input style="margin: 0 auto" type="text"class="password"id=""  name="password">
-</div>
-
-    <input type="button" style="margin: 50px;" class="btn btn-primary" type="Submit" value="Login">
-
-
-</form>
-</div>
+    <header class="card-header">
+        <h4 class="card-title mt-2">Sign in</h4>
+    </header>
+    <div class="card-body ">
+    <form #registerForm="ngForm" (submit)="onSubmit(registerForm)" >
+        <div class="col form-group offset-md-3">
+            <label for="">Email:</label>
+            <input type="text" name="email" class="form-control" style="width: 300px;" ngModel #email="ngModel" [class.is.invalid]="email.invalid && email.touched" required  />
+            <small class="text-danger" [class.d-none]="email.untouched || email.valid">*This is required field</small>
+        </div>
+    
+        <div class="col form-group offset-md-3">
+            <label for="">Password:</label>
+            <input type="text" name="password" class="form-control" style="width: 200px;" ngModel #password="ngModel" [class.is.invalid]="password.invalid && password.touched" required />
+            <small class="text-danger" [class.d-none]="password.untouched || password.valid">*This is required field</small>
+        </div>
+    
+        <div class="col form-group offset-md-3">
+            <button [disabled]="registerForm.invalid" type="submit" class="btn btn-primary btn-block" style="margin-left:15%; margin-top: 10px;"> Sign in  </button>        
+        </div>
+    </form>
+    <div class="border-top card-body text-center">Dont have an account? <a routerLink="../">Sign up</a></div>
     </div>
-</body>
-</html>
-
+    </div>
+    </div>
+    </div>
+</div>
