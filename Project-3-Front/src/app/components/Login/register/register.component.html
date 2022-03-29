@@ -25,9 +25,12 @@
     
         <div class="col form-group offset-md-3">
             <label for="">Email:</label>
-            <input type="text" name="email" class="form-control" style="width: 300px;" ngModel #email="ngModel" [class.is.invlaid]="email.invalid && email.touched" required  />
-            <small class="text-danger" [class.d-none]="email.untouched || email.valid">*This is required field</small>
-        </div>
+            <input type="text" name="email" class="form-control" pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$" style="width: 300px;" ngModel #email="ngModel" [class.is.invalid]="email.invalid && email.touched" required  />
+            <div *ngIf="email.errors && (email.invalid || email.touched)">
+                <small class="text-danger" *ngIf="email.errors['required']">*This is required field</small>
+                <small class="text-danger" *ngIf="email.errors['pattern']">*This is not a valid email</small>
+              </div>
+              </div>
     
         <div class="col form-group offset-md-3">
             <label for="">Password:</label>
