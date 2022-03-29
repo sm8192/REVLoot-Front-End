@@ -1,0 +1,48 @@
+<div class="container">
+    <div class="row justify-content-md-center">
+    <div class="col-md-6">
+    <div class="card">
+    
+    <header class="card-header">
+        <a routerLink="../" class="btn btn-outline-primary mt-1" style="float: right;">Log in</a>
+        <h4 class="card-title mt-2">Register</h4>
+    </header>
+    <div class="card-body ">
+    <form #registerForm="ngForm" (submit)="onSubmit(registerForm)" >
+        <div class="col form-group offset-md-3">
+            <label for="" >First Name:</label>
+            <input type="text" name="firstName" class="form-control" style="width: 200px;" ngModel #firstName="ngModel" [class.is.invlaid]="firstName.invalid && firstName.touched" required />
+            <small class="text-danger" [class.d-none]="firstName.untouched || firstName.valid">*This is required field</small>
+        </div>
+    
+        <div class="col form-group offset-md-3">
+            <label for="">Last Name:</label>
+            <input type="text" name="lastName" class="form-control" style="width: 200px;" ngModel #lastName="ngModel" [class.is.invlaid]="lastName.invalid && lastName.touched" required />
+            <small class="text-danger" [class.d-none]="lastName.untouched || lastName.valid">*This is required field</small>
+        </div>
+    
+    
+        <div class="col form-group offset-md-3">
+            <label for="">Email:</label>
+            <input type="text" name="email" class="form-control" style="width: 300px;" ngModel #email="ngModel" [class.is.invlaid]="email.invalid && email.touched" required  />
+            <small class="text-danger" [class.d-none]="email.untouched || email.valid">*This is required field</small>
+        </div>
+    
+        <div class="col form-group offset-md-3">
+            <label for="">Password:</label>
+            <input type="text" name="password" class="form-control" style="width: 200px;" ngModel #password="ngModel" [class.is.invlaid]="password.invalid && password.touched" required />
+            <small class="text-danger" [class.d-none]="password.untouched || password.valid">*This is required field</small>
+        </div>
+    
+        <div class="col form-group offset-md-3">
+            <button [disabled]="registerForm.invalid" type="submit" class="btn btn-primary btn-block" style="margin-left:15%; margin-top: 10px;"> Register  </button>        
+        </div>
+        <small class="text-muted">By clicking the 'Sign Up' button, you confirm that you accept our <br> Terms of use and Privacy Policy.</small>  
+    </form>
+    <div class="border-top card-body text-center">Have an account? <a routerLink="../">Log In</a></div>
+    </div>
+    </div>
+    </div>
+    </div>
+</div>
+    
