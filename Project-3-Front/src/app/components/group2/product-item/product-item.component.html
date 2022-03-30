@@ -1,0 +1,48 @@
+<div class="container wrap_center">
+
+    <div class="item_wrapper">
+        <div class="item_img_wrap">
+            <img class="item_img" src="{{productItem.productImage}}" alt="image">
+        </div>
+        <div class="item_content_wrap">
+            <div class="item_content_title">{{productItem.productName}}</div>
+            <div class="item_content_price">{{productItem.price | currency }} <span>for each</span></div>
+            <div class="item_content_description">{{productItem.description}}</div>
+        </div>
+        <div class="item_cost_wrap">
+
+
+            <!-- Input of product Q -->
+            <form  class="item_form" #addToCartForm="ngForm" (submit)="onFormSubmit(addToCartForm.value)">
+                <div *ngIf="totalPrice >= 0" class="price_item_total">Total price: <span><b>{{totalPrice | currency}}</b></span></div>
+                <div  *ngIf="totalPrice < 0"class="price_item_total">Total price: <span><b>{{0 | currency}}</b></span></div>
+
+                <div >
+                    <div class="item_input_wrap">
+                        <span>Count: </span>
+                        <input
+                            type="number"
+                            name="productQty"
+                            class="item_input"
+                            [(ngModel)] = "productItem.productQty"
+                            value = productItem.productQty
+                            #productQty="ngModel"
+                            #productQtyControl="ngModel"
+                            [class.is-invalid]="productQty.invalid"
+                            required
+                            pattern="^[1-9][0-9]*$"
+                            />
+                    </div>
+                </div>
+
+                <button class="change_item" (click)="ChangeQ('add')">Add item</button>
+                <button class="change_item" (click)="ChangeQ('remove')">Remove item</button>
+
+                <input  [disabled]="addToCartForm.invalid"type="submit" value="Add my cart" class="addItem" />
+            </form>
+        </div>
+    </div>
+    
+
+</div>
+
