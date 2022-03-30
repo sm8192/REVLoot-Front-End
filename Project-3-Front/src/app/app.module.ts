@@ -5,14 +5,22 @@ import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+
 import { SearchPipe } from './pipes/search.pipe';
 import { SearchTestComponent } from './components/group2/search-test/search-test.component';
+
+import { ProductListPageComponent } from './components/group2/product-list-page/product-list-page.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
+
     SearchPipe,
-    SearchTestComponent
+    SearchTestComponent,
+
+    ProductListPageComponent
+
   ],
   imports: [
     BrowserModule,
