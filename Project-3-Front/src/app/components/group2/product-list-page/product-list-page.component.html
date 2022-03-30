@@ -1,0 +1,30 @@
+<p>product-list-page works!</p>
+<div class="container">
+    <div class="row card-group">
+        <div class="col-sm-3" *ngFor="let product of products">
+            <div class="card text-center border-dark rounded-lg border-2"
+                style="width: auto; height: 410px; margin: 5px;">
+                <br>
+                <img src={{product.productImage}} class="card-img-top" alt="{{product.productName}}"
+                    style="width: 200px; height: 200px; margin: auto;">
+                <div class="card-body border " style="position: relative;">
+                    <h5 class="card-title">{{product.productName}} <p *ngIf="product.productName.length < 50"></p>
+                    </h5>
+                    <p class="card-text">{{product.price | currency}}</p>
+                    
+                    <p class="card-text" *ngIf="product.productQty > 0">IN STOCK: {{product.productQty}}</p>
+                    <p class="card-text text-danger" *ngIf="product.productQty <= 0">OUT OF STOCK</p>
+                    <!-- <span>Qty: 
+                        <input style="margin-bottom: 10px" type="number" id="quantity" name="quantity" min="1" max="5">
+                    </span> -->
+                    <div class="dropdown">
+                        <button [disabled]="product.productQty <= 0" class="btn btn-primary" type="button" aria-expanded="false" (click)="onClick(product)">
+                            <!-- (click)="onClick(product.id) -->
+                            View Item
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
