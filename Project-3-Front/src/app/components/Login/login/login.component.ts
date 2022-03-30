@@ -18,10 +18,13 @@ export class LoginComponent implements OnInit {
   }
   onSubmit(value:any): void {
     this.service.getUserByCredentials(value.form.value.email, value.form.value.password).subscribe(response => {
+      this.errorMsg = "";
       console.log(response);
+      localStorage.setItem("username", response.email)
     }, error => {
       console.log(error);
       this.errorMsg = error.error.message;
+      localStorage.removeItem("username");
       console.log(this.errorMsg);
     })
 

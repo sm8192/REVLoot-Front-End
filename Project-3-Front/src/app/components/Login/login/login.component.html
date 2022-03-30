@@ -20,6 +20,10 @@
             <input type="password" name="password" class="form-control" style="width: 300px;" ngModel #password="ngModel" [class.is-invalid]="password.invalid && password.touched" required />
             <small class="invalid-feedback text-danger" [class.d-none]="password.untouched || password.valid">*This is required field</small>
         </div>
+
+        <div class="alert alert-danger mt-3" role="alert" *ngIf="errorMsg.length!=0">
+            {{errorMsg}}
+        </div>
     
         <div class="col form-group offset-md-3">
             <button [disabled]="registerForm.invalid" type="submit" class="btn btn-primary btn-block" style="margin-left:15%; margin-top: 10px; margin-bottom: 10px;"> Sign in  </button>        
