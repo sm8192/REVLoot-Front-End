@@ -10,6 +10,7 @@ import { UserService } from 'src/app/services/user.service';
 export class LoginComponent implements OnInit {
 
   user: User | null = null
+  errorMsg = "";
 
   constructor(private service: UserService) { }
 
@@ -18,6 +19,10 @@ export class LoginComponent implements OnInit {
   onSubmit(value:any): void {
     this.service.getUserByCredentials(value.form.value.email, value.form.value.password).subscribe(response => {
       console.log(response);
+    }, error => {
+      console.log(error);
+      this.errorMsg = error.error.message;
+      console.log(this.errorMsg);
     })
 
   }

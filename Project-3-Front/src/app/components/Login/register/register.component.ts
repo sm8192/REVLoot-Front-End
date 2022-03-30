@@ -9,6 +9,8 @@ import { UserService } from 'src/app/services/user.service';
 })
 export class RegisterComponent implements OnInit {
 
+  errorMsg = "";
+
   constructor(private service: UserService) { }
 
   ngOnInit(): void {
@@ -21,6 +23,10 @@ onSubmit(data: any){//does not do anything yet just put it here to get rid of er
   console.log(user);
   this.service.addUser(user).subscribe(response => {
     console.log(response)
+  }, error => {
+    console.log(error);
+    this.errorMsg = error.error.message;
+    console.log(this.errorMsg);
   });
 
 }
