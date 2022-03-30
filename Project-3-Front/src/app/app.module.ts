@@ -10,7 +10,7 @@ import { SearchPipe } from './pipes/search.pipe';
 import { SearchTestComponent } from './components/group2/search-test/search-test.component';
 
 import { ProductListPageComponent } from './components/group2/product-list-page/product-list-page.component';
-
+import { ProductItemComponent } from './components/group2/product-item/product-item.component';
 
 @NgModule({
   declarations: [
@@ -19,8 +19,8 @@ import { ProductListPageComponent } from './components/group2/product-list-page/
     SearchPipe,
     SearchTestComponent,
 
-    ProductListPageComponent
-
+    ProductListPageComponent,
+    ProductItemComponent,
   ],
   imports: [
     BrowserModule,
