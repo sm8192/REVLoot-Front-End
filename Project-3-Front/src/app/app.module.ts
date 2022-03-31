@@ -5,10 +5,7 @@ import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-
 import { SearchPipe } from './pipes/search.pipe';
-import { SearchTestComponent } from './components/group2/search-test/search-test.component';
-
 import { ProductListPageComponent } from './components/group2/product-list-page/product-list-page.component';
 import { ProductItemComponent } from './components/group2/product-item/product-item.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
@@ -16,10 +13,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 @NgModule({
   declarations: [
     AppComponent,
-
     SearchPipe,
-    SearchTestComponent,
-
     ProductListPageComponent,
     ProductItemComponent,
     NavbarComponent,

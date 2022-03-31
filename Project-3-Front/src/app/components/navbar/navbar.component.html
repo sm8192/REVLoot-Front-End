@@ -18,7 +18,7 @@
                           [(ngModel)]='searchText' placeholder="Search For A Product" 
                           autofocus>
                       </div>
-                      <div *ngIf="searchText == undefined; then thenBlock; else elseBlock" ></div>
+                      <div *ngIf="searchText == undefined ||  searchText == ''; then thenBlock; else elseBlock" ></div>
                       <ng-template #thenBlock></ng-template>
                         
                       <ng-template #elseBlock>
@@ -31,7 +31,7 @@
                 
                     </div>
                 </div>
-                <button id="products" class="btn" type="button" aria-expanded="false" routerLink="productList">All Products</button>
+                <button id="products" class="btn" type="button" aria-expanded="false" routerLink="/">All Products</button>
                 <a routerLink="/cart"><img id="cart" src="assets/images/cart.png" alt=""></a>
             </nav>
         </div>
