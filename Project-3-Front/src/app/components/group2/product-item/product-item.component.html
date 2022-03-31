@@ -1,4 +1,4 @@
-<div class="container wrap_center">
+<div class="container bg-light wrap_center">
 
     <div class="item_wrapper">
         <div class="item_img_wrap">
@@ -13,18 +13,18 @@
 
 
             <!-- Input of product Q -->
-            <form  class="item_form" #addToCartForm="ngForm" (submit)="onFormSubmit(addToCartForm.value)">
+            <form  class="item_form text-white" #addToCartForm="ngForm" (submit)="onFormSubmit(addToCartForm.value)">
                 <div *ngIf="totalPrice >= 0" class="price_item_total">Total price: <span><b>{{totalPrice | currency}}</b></span></div>
                 <div  *ngIf="totalPrice < 0"class="price_item_total">Total price: <span><b>{{0 | currency}}</b></span></div>
                 <p>In Stock: <b>{{productItem.productQty}}</b></p>
                 <div >
 
-                    <div class="item_input_wrap">
+                    <div class="item_input_wrap border-white">
                         <span>Qty: </span>
                         <input
                         type="number"
                         name="orderQty"
-                        class="item_input"
+                        class="item_input text-white"
                         value="orderCount"
                         #orderQty="ngModel"
                         [(ngModel)] = "orderCount"
@@ -39,7 +39,7 @@
                 <button class="change_item" (click)="ChangeQ('add')">Add item</button>
                 <button class="change_item" (click)="ChangeQ('remove')">Remove item</button>
 
-                <input  [disabled]="addToCartForm.invalid"type="submit" value="Add my cart" class="addItem" />
+                <input  [disabled]="addToCartForm.invalid" type="submit" value="Add my cart" class="addItem" />
             </form>
         </div>
     </div>
