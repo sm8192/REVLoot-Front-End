@@ -1,0 +1,17 @@
+.container {
+    margin: auto;
+ margin-top: 50px;
+        border-radius: 30px;
+}
+
+.card-body {
+    background-color: rgb(72, 76, 86);
+    overflow: hidden;
+    background-size: cover;
+    width: 100%;
+    
+    color:rgb(255, 255, 255);
+}
+#button{
+    background-color:  #F26925;
+}
