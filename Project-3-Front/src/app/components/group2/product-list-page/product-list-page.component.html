@@ -1,21 +1,21 @@
 <div class="container">
     <div class="row card-group">
-        <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6" *ngFor="let product of products">
+        <div class="col-lg-3 col-md-4 col-sm-6" *ngFor="let product of products">
             <div class="card text-center border-dark rounded-lg border-2"
                 style="width: auto; height: 410px; margin: 5px;">
                 <br>
                 <img src={{product.productImage}} class="card-img-top" alt="{{product.productName}}"
                     style="width: 200px; height: 200px; margin: auto;">
-                <div class="card-body" style="position: relative;">
+                <div class="card-body">
                     
-                    <h5 class="card-title">{{product.productName | titlecase}} <p *ngIf="product.productName.length < 50"></p>
-                    </h5>
+                    <h5 class="card-title">{{product.productName | titlecase}} <p *ngIf="product.productName.length < 50"></p></h5>
+
                     <p class="card-text">{{product.price | currency}}</p>
                     
                     <p class="card-text" *ngIf="product.productQty > 0">IN STOCK: {{product.productQty}}</p>
                     <p class="card-text text-danger" *ngIf="product.productQty <= 0">OUT OF STOCK</p>
                     <div class="dropdown">
-                        <button  class="btn btn-primary" type="button" aria-expanded="false" (click)="onClick(product.id)">View Item</button>
+                        <button  class="btn" type="button" aria-expanded="false" (click)="onClick(product.id)">View Item</button>
                     </div>
                 </div>
             </div>

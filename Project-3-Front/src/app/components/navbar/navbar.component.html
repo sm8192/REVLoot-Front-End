@@ -7,13 +7,14 @@
     <body>
         <div class="wrap">
             <div class="top text-white">
-                <h5 class="topleft">Already Have An Account?</h5><h5 class="topleft"><a routerLink="/login">Login Here</a></h5><h5 class="topright"><a routerLink="/create">Create Account</a></h5><h5 class="topright">Need To Make An Account?</h5>
+                <h5 class="topleft">Already Have An Account? <a routerLink="/login">Login Here</a></h5>
+                <h5 class="topright">Need To Make An Account? <span class="righta"><a routerLink="/create">Create Account</a></span></h5>
             </div>
             <nav class="navbar">
                 <a routerLink="" id="logo"><img src="https://revature.com/wp-content/themes/revature/imgs/logo-white-color.png" alt=""></a>                    
                 <div class="content" role="main" style="margin-top: 30px;">
                     <div class="card" id="search">
-                      <div class="form-group">
+                      <div class="form-group nav-small">
                         <input type="email" class="form-control" id="search-text" aria-describedby="search-text" 
                           [(ngModel)]='searchText' placeholder="Search For A Product" 
                           autofocus>

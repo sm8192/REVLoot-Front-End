@@ -20,9 +20,9 @@ export class ProductItemComponent implements OnInit {
 
   ngOnInit(): void {
     this.id = this.route.snapshot.paramMap.get("id")
-    // this.id=1;
     this.productService.getProductById(this.id).subscribe(resp => { 
       this.productItem = resp;
+      console.log(this.productItem)
     })
   }
 
