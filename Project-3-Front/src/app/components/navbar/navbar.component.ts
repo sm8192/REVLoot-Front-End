@@ -23,8 +23,11 @@ export class NavbarComponent implements OnInit {
 
   onClick(productName: any){
     this.productService.getProductByName(productName).subscribe(data => {
+      this.searchText = ''
       this.item = data[0].id
-      this.router.navigate(['productItem', this.item])
+      // this.router.navigate(['productItem', this.item])
+      this.router.navigateByUrl('/', {skipLocationChange: true}).then(() => this.router.navigate(['productItem', this.item]));
+      
       });
   }
 

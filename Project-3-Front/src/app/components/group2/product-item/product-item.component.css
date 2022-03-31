@@ -31,7 +31,7 @@
 
 .item_img{
     width: 100%;
-    
+    box-shadow: 6px 5px 8px #474C55;
 }
 
 .item_content_title{
