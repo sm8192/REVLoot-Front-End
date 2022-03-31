@@ -1,6 +1,6 @@
 <div class="container">
     <div class="row card-group">
-        <div class="col-sm-3" *ngFor="let product of products">
+        <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6" *ngFor="let product of products">
             <div class="card text-center border-dark rounded-lg border-2"
                 style="width: auto; height: 410px; margin: 5px;">
                 <br>
@@ -22,11 +22,6 @@
                             <!-- (click)="onClick(product.id) -->
                             <!-- [disabled]="product.productQty <= 0" -->
                             View Item
-                        </button>
-                        <button  class="btn btn-primary" type="button" aria-expanded="false" routerLink="productList">
-                            <!-- (click)="onClick(product.id) -->
-                            <!-- [disabled]="product.productQty <= 0" -->
-                            Loots
                         </button>
                     </div>
                 </div>
