@@ -9,84 +9,18 @@ import { ProductService } from 'src/app/services/product.service';
 })
 export class ProductListPageComponent implements OnInit {
 
-  // product: any;
 
-  products: any[] = [
-    {
-      "productId":1,
-      "productName":"title",
-      "price":"1.00",
-      "description": "lorem ipsem",
-      "productQty":0,
-      "productImage":"https://rdironworks.com/wp-content/uploads/2017/12/dummy-200x200.png"
-    },
-    {
-      "productId":2,
-      "productName":"title",
-      "price":"1.00",
-      "description": "lorem ipsem",
-      "productQty":5,
-      "productImage":"https://rdironworks.com/wp-content/uploads/2017/12/dummy-200x200.png"
-    },
-    {
-      "productId":3,
-      "productName":"title",
-      "price":"1.00",
-      "description": "lorem ipsem",
-      "productQty":5,
-      "productImage":"https://rdironworks.com/wp-content/uploads/2017/12/dummy-200x200.png"
-    },
-    {
-      "productId":4,
-      "productName":"title",
-      "price":"1.00",
-      "description": "lorem ipsem",
-      "productQty":5,
-      "productImage":"https://rdironworks.com/wp-content/uploads/2017/12/dummy-200x200.png"
-    },
-    {
-      "productId":5,
-      "productName":"title",
-      "price":"1.00",
-      "description": "lorem ipsem",
-      "productQty":0,
-      "productImage":"https://rdironworks.com/wp-content/uploads/2017/12/dummy-200x200.png"
-    },
-    {
-      "productId":6,
-      "productName":"title",
-      "price":"1.00",
-      "description": "lorem ipsem",
-      "productQty":5,
-      "productImage":"https://rdironworks.com/wp-content/uploads/2017/12/dummy-200x200.png"
-    },
-    {
-      "productId":7,
-      "productName":"title",
-      "price":"1.00",
-      "description": "lorem ipsem",
-      "productQty":5,
-      "productImage":"https://rdironworks.com/wp-content/uploads/2017/12/dummy-200x200.png"
-    },
-    {
-      "productId":8,
-      "productName":"title",
-      "price":"1.00",
-      "description": "lorem ipsem",
-      "productQty":5,
-      "productImage":"https://rdironworks.com/wp-content/uploads/2017/12/dummy-200x200.png"
-    },
-  ]
+  products: any[] = []
 
-  constructor(private route: Router, private data: ProductService) { }
+  constructor(private route: Router, private productService: ProductService) { }
 
   ngOnInit(): void {
-    // this.data.getProducts().subscribe(data => this.products = data)
-    // console.log(this.data);
+    this.productService.getProducts().subscribe(data => this.products = data)
   }
 
-  // onClick(productId: any): void {
-  //   this.route.navigate(['productPage', productId])
-  // }
+  onClick(productId: any): void {
+    console.log(productId)
+    this.route.navigate(['productItem', productId])
+  }
 
 }

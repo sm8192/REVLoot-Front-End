@@ -18,7 +18,7 @@
                         <input style="margin-bottom: 10px" type="number" id="quantity" name="quantity" min="1" max="5">
                     </span> -->
                     <div class="dropdown">
-                        <button  class="btn btn-primary" type="button" aria-expanded="false" routerLink="productItem/{{product.productId}}">
+                        <button  class="btn btn-primary" type="button" aria-expanded="false" (click)="onClick(product.id)">
                             <!-- (click)="onClick(product.id) -->
                             <!-- [disabled]="product.productQty <= 0" -->
                             View Item
