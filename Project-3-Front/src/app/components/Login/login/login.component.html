@@ -12,8 +12,8 @@
     <div class="col-md-6">
     <div class="card">
     
-    <header class="card-header">
-        <h4 class="card-title">Sign in</h4>
+    <header class="card-header bg-dark" >
+        <h4 class="card-title mt-2 text-light">Sign in</h4>
     </header>
     <div class="card-body ">
     <form #registerForm="ngForm" (submit)="onSubmit(registerForm)" >
@@ -28,6 +28,10 @@
             <label for="">Password:</label>
             <input type="password" name="password" class="form-control" style="width: 300px;" ngModel #password="ngModel" [class.is-invalid]="password.invalid && password.touched" required />
             <small class="invalid-feedback text-danger" [class.d-none]="password.untouched || password.valid">*This is required field</small>
+        </div>
+
+        <div class="alert alert-danger mt-3" role="alert" *ngIf="errorMsg.length!=0">
+            {{errorMsg}}
         </div>
     
         <div class="col form-group offset-md-3">

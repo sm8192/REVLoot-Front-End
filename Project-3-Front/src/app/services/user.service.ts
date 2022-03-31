@@ -38,12 +38,12 @@ export class UserService {
   }
 
   isUserLoggedIn(){
-    let user = localStorage.getItem('token')
+    let user = localStorage.getItem('username')
     return !(user===null)
   }
 
   logOut(){
-    localStorage.removeItem('token')
+    localStorage.removeItem('username')
     this.router.navigate(['login'])
   }
 
