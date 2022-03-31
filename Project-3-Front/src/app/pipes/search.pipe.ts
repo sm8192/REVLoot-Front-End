@@ -9,9 +9,10 @@ export class SearchPipe implements PipeTransform {
     if (!items) {
       return [];
     }
-    if (!searchText) {
+    if(!searchText){
       return items;
     }
+
     searchText = searchText.toLocaleLowerCase();
 
     return items.filter(item => {
