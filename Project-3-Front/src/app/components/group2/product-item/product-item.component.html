@@ -23,12 +23,12 @@
                         <span>Qty: </span>
                         <input
                         type="number"
-                        name="orderCount2"
+                        name="orderQty"
                         class="item_input"
                         value="orderCount"
-                        #orderCount2="ngModel"
+                        #orderQty="ngModel"
                         [(ngModel)] = "orderCount"
-                        [class.is-invalid]="orderCount2.invalid"
+                        [class.is-invalid]="orderQty.invalid"
                         required
                         pattern="^[1-9][0-9]*$"
                         max = {{productItem.productQty}}
