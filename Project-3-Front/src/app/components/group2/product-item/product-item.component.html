@@ -16,22 +16,23 @@
             <form  class="item_form" #addToCartForm="ngForm" (submit)="onFormSubmit(addToCartForm.value)">
                 <div *ngIf="totalPrice >= 0" class="price_item_total">Total price: <span><b>{{totalPrice | currency}}</b></span></div>
                 <div  *ngIf="totalPrice < 0"class="price_item_total">Total price: <span><b>{{0 | currency}}</b></span></div>
-
+                <p>In Stock: <b>{{productItem.productQty}}</b></p>
                 <div >
+
                     <div class="item_input_wrap">
-                        <span>Count: </span>
+                        <span>Qty: </span>
                         <input
-                            type="number"
-                            name="productQty"
-                            class="item_input"
-                            [(ngModel)] = "productItem.productQty"
-                            value = productItem.productQty
-                            #productQty="ngModel"
-                            #productQtyControl="ngModel"
-                            [class.is-invalid]="productQty.invalid"
-                            required
-                            pattern="^[1-9][0-9]*$"
-                            />
+                        type="number"
+                        name="orderCount2"
+                        class="item_input"
+                        value="orderCount"
+                        #orderCount2="ngModel"
+                        [(ngModel)] = "orderCount"
+                        [class.is-invalid]="orderCount2.invalid"
+                        required
+                        pattern="^[1-9][0-9]*$"
+                        max = {{productItem.productQty}}
+                    >
                     </div>
                 </div>
 
