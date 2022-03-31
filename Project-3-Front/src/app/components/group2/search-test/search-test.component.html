@@ -12,10 +12,11 @@
         
       <ng-template #elseBlock>
         <ul class="list-group list-group-flush">
-            <li class="list-group-item" *ngFor="let product of products | search: searchText | slice:0:10; let i=index">
+            <li class="list-group-item" *ngFor="let product of productList | search: searchText | slice:0:10; let i=index">
             {{product}}
             </li>
         </ul>
       </ng-template>
+
     </div>
   </div>

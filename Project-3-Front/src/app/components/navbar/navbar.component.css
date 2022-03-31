@@ -1,0 +1,109 @@
+.wrap{
+    background-color: black;
+    padding-bottom: 75px;
+    width: 100%;
+    padding-left: 10px;
+    padding-top: 10px;
+    padding-right: 14px;
+}
+.navbar{
+    padding-left: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 10px;
+    width: 100%;
+    opacity: 0.75;
+    background-color: rgb(55, 53, 61);
+    transition: 0.5s;
+    height: 75px;
+    display: inline-block;
+}
+.navbar:hover{
+    opacity: 1.0;
+    transition: 0.5s;
+}
+.logo{
+    width: fit-content;
+}
+.logo:hover{
+    border: 1px solid black;
+}
+.height {
+    height: 100vh
+}
+
+.form {
+    position: absolute;
+}
+
+.search {
+    position: absolute;
+    top: 16px;
+    left: 235px;
+    padding: 2px;
+    border-left: 1px solid #d1d5db
+}
+
+.form-input {
+    position: absolute;
+    margin-top: 20px;
+    height: 50px;
+    border-radius: 1px
+}
+
+.form-input:hover {
+    box-shadow: none;
+}
+
+.form-control{
+    width: 260px;
+    text-align: center;
+    border: none;
+}
+.form-control:focus::placeholder{
+    color: transparent;
+}
+#icon{
+    width: 50px;
+    border: 1px solid black;
+    border-radius: 100px;;
+    background-color: rgb(0, 0, 0);
+}
+.search{
+    border-radius: 100px;
+    background-color: black;
+}
+.search:focus{
+    border: white 1px solid;
+    border-radius: 100px;
+    background-color: black;
+}
+#icon:focus{
+    background-color: blue;
+    width: 98%;
+}
+h5{
+    display: inline-block;
+    padding-right: 10px;
+}
+.topright{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    float: right;
+}
+.topleft{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding-left: 10px;
+}
+#cart{
+    padding: 5px;
+    position: absolute;
+    top: 87px;
+    right: 10px;
+    float: right;
+    width: 50px;
+    border-radius: 10px;
+    background-color: white;
+}
+#cart:hover{
+    border: orange 3px solid;
+}

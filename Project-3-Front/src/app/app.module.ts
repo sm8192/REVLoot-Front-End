@@ -11,6 +11,7 @@ import { SearchTestComponent } from './components/group2/search-test/search-test
 
 import { ProductListPageComponent } from './components/group2/product-list-page/product-list-page.component';
 import { ProductItemComponent } from './components/group2/product-item/product-item.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { ProductItemComponent } from './components/group2/product-item/product-i
 
     ProductListPageComponent,
     ProductItemComponent,
+    NavbarComponent,
   ],
   imports: [
     BrowserModule,
