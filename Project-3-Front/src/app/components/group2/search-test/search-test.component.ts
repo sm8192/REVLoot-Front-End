@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { map } from 'rxjs/operators';
+
+import { ProductService } from 'src/app/services/product.service';
 
 @Component({
   selector: 'app-search-test',
@@ -7,6 +10,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SearchTestComponent implements OnInit {
   searchText: any;
+  productStrings: any[] = [];
+  productList: any[] = [];
+
   products = [
     'Rubber Ball',
     'Ballpoint Pen',
@@ -37,9 +43,11 @@ export class SearchTestComponent implements OnInit {
   ];
 
 
-  constructor() { }
+  constructor(private productService: ProductService) { }
 
   ngOnInit(): void {
+    this.productService.getProductNames().subscribe(data => this.productList = data)
+    
   }
 
 }
