@@ -1,0 +1,23 @@
+<head>
+	<title>Shopping Cart UI</title>
+    <base routerLink="/cart">
+</head>
+<body>
+   <div class="CartContainer">
+   	   <div class="Header">
+		<button [disabled]="(cartService.getCartLength()==0)" routerLink="/cart" class="button">View cart</button></div>
+   	   </div>
+   	   <div class="Cart-Items" *ngFor="let item of cartService.getCart();index as i;">
+   	   	  <div class="about">
+   	   	  	<h1 class="title">{{item.productName}}</h1>
+   	   	  </div>
+			<div>
+				{{ item.price | currency }}
+			</div>
+   	   	  <!-- <div class="counter">
+			<button class="btn" [disabled]='(item.productQty == 1)' (click)="reduceFromCart(item)">-</button>
+   	   	  	<div class="count">{{ item.productQty }}</div>
+   	   	  	<button class="btn" [disabled]='(item.productQty == quantities[i])' (click)="increaseToCart(item)">+</button>
+   	   	  </div> -->
+   	   </div>
+</body>

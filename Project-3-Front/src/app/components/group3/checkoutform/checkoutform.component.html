@@ -1,0 +1,189 @@
+<head>
+    <title>Checkout Form</title>
+    <base routerLink="/checkout">
+</head>
+<body>
+    <form action="" #checkoutform="ngForm" (ngSubmit)="onsubmit(checkoutform)">
+        <div class="container">
+            <h1>Billing details</h1>
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <label for="">First name</label>
+                        <input type="text" placeholder="First Name" class="form-control" name="firstname" #firstname="ngModel" ngModel required [class.is-invalid]="firstname.invalid && firstname.touched">
+                    </div>    
+                </div>
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <label for="">Last name</label>
+                        <input type="text" class="form-control" placeholder="Last Name" name="lastname" #lastname="ngModel" ngModel required [class.is-invalid]="lastname.invalid && lastname.touched">
+                    </div>
+                </div>
+                        <!-- <div class="col-12">
+                        <div class="form-group">
+                            <label for="">Username</label>
+                            <input type="text" placeholder="Username"  class="form-control" name="username" #username="ngModel" ngModel required>
+                        </div>            
+                    </div> -->
+                <div class="col-12">
+                    <div class="form-group">
+                        <label for="">Email</label>
+                        <input type="text" placeholder="Email" class="form-control" name="email" #email="ngModel" ngModel required [class.is-invalid]="email.invalid && email.touched">
+                    </div>        
+                </div>
+                <div class="col-12">
+                    <div class="form-group">
+                        <label for="">Address</label>
+                        <input type="text" placeholder="Address 1" class="form-control" name="address" #address="ngModel" ngModel required [class.is-invalid]="address.invalid && address.touched">
+                    </div>        
+                </div>
+                <div class="col-12">
+                    <div class="form-group">
+                        <label for="">Address 2 (Optional)</label>
+                        <input type="text" placeholder="Apartment suite" class="form-control" name="address2" #address2="ngModel" ngModel required>
+                    </div>    
+                </div>
+                <div class="col-sm-4">
+                    <div class="form-group">
+                        <label for="">Country</label>
+                        <select class="form-select" >
+                            <option selected>Choose...</option>
+                            <option value="ca">Canada</option>
+                            <option value="ch">China</option>
+                            <option value="in">India</option>
+                            <option value="jp">Japan</option>
+                            <option value="mx">Mexico</option>
+                            <option value="sw">Sweden</option>
+                            <option value="uk">United Kingdom</option>
+                            <option value="us">United States</option>
+                        </select>                
+                    </div>    
+                </div>
+                <div class="col-sm-4">
+                    <div class="form-group">
+                        <label for="">State</label>
+                        <select class="form-select" id="state" name="state">
+                            <option selected>Choose...</option>
+                            <option value="AK">Alaska</option>
+                            <option value="AL">Alabama</option>
+                            <option value="AR">Arkansas</option>
+                            <option value="AZ">Arizona</option>
+                            <option value="CA">California</option>
+                            <option value="CO">Colorado</option>
+                            <option value="CT">Connecticut</option>
+                            <option value="DC">District of Columbia</option>
+                            <option value="DE">Delaware</option>
+                            <option value="FL">Florida</option>
+                            <option value="GA">Georgia</option>
+                            <option value="HI">Hawaii</option>
+                            <option value="IA">Iowa</option>
+                            <option value="ID">Idaho</option>
+                            <option value="IL">Illinois</option>
+                            <option value="IN">Indiana</option>
+                            <option value="KS">Kansas</option>
+                            <option value="KY">Kentucky</option>
+                            <option value="LA">Louisiana</option>
+                            <option value="MA">Massachusetts</option>
+                            <option value="MD">Maryland</option>
+                            <option value="ME">Maine</option>
+                            <option value="MI">Michigan</option>
+                            <option value="MN">Minnesota</option>
+                            <option value="MO">Missouri</option>
+                            <option value="MS">Mississippi</option>
+                            <option value="MT">Montana</option>
+                            <option value="NC">North Carolina</option>
+                            <option value="ND">North Dakota</option>
+                            <option value="NE">Nebraska</option>
+                            <option value="NH">New Hampshire</option>
+                            <option value="NJ">New Jersey</option>
+                            <option value="NM">New Mexico</option>
+                            <option value="NV">Nevada</option>
+                            <option value="NY">New York</option>
+                            <option value="OH">Ohio</option>
+                            <option value="OK">Oklahoma</option>
+                            <option value="OR">Oregon</option>
+                            <option value="PA">Pennsylvania</option>
+                            <option value="PR">Puerto Rico</option>
+                            <option value="RI">Rhode Island</option>
+                            <option value="SC">South Carolina</option>
+                            <option value="SD">South Dakota</option>
+                            <option value="TN">Tennessee</option>
+                            <option value="TX">Texas</option>
+                            <option value="UT">Utah</option>
+                            <option value="VA">Virginia</option>
+                            <option value="VT">Vermont</option>
+                            <option value="WA">Washington</option>
+                            <option value="WI">Wisconsin</option>
+                            <option value="WV">West Virginia</option>
+                            <option value="WY">Wyoming</option>
+                        </select>                                
+                    </div>    
+                </div>
+                <div class="col-sm-4">
+                    <div class="form-group">
+                        <label for="">Zipcode</label>
+                        <input type="text" class="form-control" placeholder="Zipcode" name="zipcode" #zipcode="ngModel" ngModel required [class.is-invalid]="zipcode.invalid && zipcode.touched" pattern="(^\d{5}$)|(^\d{5}-\d{4}$)">
+                    </div>
+                    <div *ngIf="zipcode.errors && (zipcode.invalid || zipcode.touched)">
+                        <small style="text-align: bottom;" class="text-danger" *ngIf="zipcode.errors['pattern']">Not a valid 5 digit zipcode</small>
+                    </div>                         
+                </div>
+                <div class="row"></div>
+                <div class="col-12">
+                    <div class="form-check top-buffer">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                        <label class="form-check-label" for="flexCheckDefault">
+                          Save this information for next time
+                        </label>
+                    </div>       
+                </div>
+                <hr/>
+                <h1>Payment</h1>
+                <br>
+                <div class="col-12">
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                        <label class="form-check-label" for="flexRadioDefault1">
+                          Credit card
+                        </label>
+                    </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                        <label class="form-check-label" for="flexRadioDefault1">
+                          Debit card
+                        </label>
+                      </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <label for="">Full name</label>
+                        <input type="text" placeholder="Name on card" class="form-control" name="fullname" #fullname="ngModel" ngModel required [class.is-invalid]="fullname.invalid && fullname.touched">
+                    </div>        
+                </div>
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <label for="">Card number</label>
+                        <input type="text" class="form-control" name="card" #card="ngModel" ngModel required [class.is-invalid]="card.invalid && card.touched">
+                    </div>    
+                </div>
+                <div class="row">
+                    <div class="col-sm-4">
+                        <div class="form-group">
+                            <label for="">Expiration</label>
+                            <input type="text" class="form-control" name="exp" #exp="ngModel" ngModel required [class.is-invalid]="exp.invalid && exp.touched">
+                        </div>    
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="form-group">
+                            <label for="">CVV</label>
+                            <input type="text" class="form-control" name="cvv" #cvv="ngModel" ngModel required [class.is-invalid]="cvv.invalid && cvv.touched">
+                        </div>
+                    </div>        
+                </div>
+                <div class="col-12 top-buffer">
+                    <button class="w-100 btn btn-primary btn-lg text-center" type="submit" [disabled]="checkoutform.invalid"><a routerLink="/ordercomplete">Continue checkout</a></button>
+                </div>
+            </div>
+        </div>   
+    </form>   
+</body>

@@ -1,0 +1,17 @@
+.center {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  color:rgb(225, 225, 235);
+}
+
+.footer {
+  padding-top:15px;
+  display: block;
+  background-color: #72A4C2;
+  position: relative;
+  width: 100%;
+  top: 1100px;
+  display: flex;
+  justify-content: center;  
+}
