@@ -108,7 +108,7 @@
 	margin-top: 5px;
 	width: 150%;
 	border: none;
-	background: linear-gradient(to bottom right, #B8D7FF, #8EB7EB);
+	background: linear-gradient(to bottom right, orange, orangered);
 	border-radius: 10px;
 	cursor: pointer;
 	font-size: 16px;
