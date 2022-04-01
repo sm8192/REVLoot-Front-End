@@ -10,14 +10,12 @@ body{
 	align-items: center;
 }
 .CartContainer{
-	width: 1250px;
+	width: 90%;
 	height: 750px;
 	background-color: #ffffff;
     border-radius: 20px;
     box-shadow: 0px 10px 20px #1687d933;
-    padding-left: 30px;
-    padding-right: 30px;
-    padding-bottom: 50px;
+	padding: 30px;
 	overflow-y: scroll;
 }
 .Header{
@@ -86,6 +84,7 @@ body{
 	align-items: center;
 }
 .btn{
+	float: right;
 	width: 40px;
 	height: 40px;
 	border-radius: 50%;
@@ -142,18 +141,18 @@ hr{
 	float: right;
 	margin-right: 5%;
 }
+
 .checkout{
-	left: 1250px;
-	bottom: 751px;
 	position:relative;
-	width: 250px;
+	width: 80%;
 	height: 250px;
 	padding: 10px;
 	border: 1px solid black;
 	background-color: white;
+	margin-left: 30px;
 }
 .total{
-	padding-bottom: 50px;
+	padding-bottom: 5px;
 	width: 100%;
 	display: flex;
 	justify-content: space-between;
@@ -226,4 +225,14 @@ hr{
 .stock{
 
 	font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+@media (max-width: 400px){
+	.CartContainer{
+		display: flex !important;
+        flex-direction: column !important;
+	}
+	.Total{
+		display: flex !important;
+		flex-direction: column !important;
+	}
 }

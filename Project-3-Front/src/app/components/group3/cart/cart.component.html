@@ -3,6 +3,28 @@
     <base routerLink="/cart">
 </head>
 <body>
+	<div class="checkout">
+		<div class="total">
+			<div>
+				<div class="Subtotal"><strong>Price:</strong></div>
+				<div class="items">{{this.cartService.getCartLength()}} items</div>
+			<div class="Shipping">Shipping:</div>
+			<div class="Tax">Tax:</div>
+			</div>
+			<div class="sub-amount">
+			<div>{{this.subTotal| currency}}</div>
+			<div class="ShippingPrice">{{this.shipping | currency}}</div>
+			<div class="Tax">{{this.tax | currency}}</div>
+		</div>
+		</div>
+		<hr><br>
+		<div class="Total">
+			<div><strong>Total:</strong>
+				<div class="TotalPrice">{{this.cartPrice | currency}}</div>
+			</div>
+			<button [disabled]="(cartService.getCartLength()==0)"  class="button">Checkout</button>
+		</div>
+	</div>
    <div class="CartContainer">
    	   <div class="Header">
    	   	<h5 class="Heading">Order Summary</h5>
@@ -11,10 +33,11 @@
 		  <hr>
 		  <div *ngIf="cartService.getCartLength() == 0">
 			<h1>There are no items in cart. Would you like to get started?</h1>
+			
 		</div>
    	   <div class="Cart-Items" *ngFor="let item of cartService.getCart();index as i;">
 		<div class="image-box">
-            <img class="itemImg"  src={{item.productImage}}/>
+            <a routerLink="/productItem/"><img class="itemImg"  src={{item.productImage}}/></a>
         </div>
 		<p><i>In Stock: </i>{{ quantities[i] }}</p>
    	   	  <div class="about">
@@ -33,28 +56,8 @@
    	   	  	<!-- <div class="save"><u>Save for later</u></div> -->
    	   	  	<button class="btn" (click)="removeFromCart(item, i)">Remove</button>
    	   	  </div>
+				
    	   </div>
+		  
    </div>
-   <div class="checkout">
-	<div class="total">
-		<div>
-			<div class="Subtotal"><strong>Price:</strong></div>
-			<div class="items">{{this.cartService.getCartLength()}} items</div>
-		<div class="Shipping">Shipping:</div>
-		<div class="Tax">Tax:</div>
-		</div>
-		<div class="sub-amount">
-		<div>{{this.subTotal| currency}}</div>
-		<div class="ShippingPrice">{{this.shipping | currency}}</div>
-		<div class="Tax">{{this.tax | currency}}</div>
-	</div>
-	</div>
-	<hr><br>
-	<div class="Total">
-		<div><strong>Total:</strong>
-			<div class="TotalPrice">{{this.cartPrice | currency}}</div>
-		</div>
-		<button [disabled]="(cartService.getCartLength()==0)"  class="button">Checkout</button>
-	</div>
-</div>
 </body>
