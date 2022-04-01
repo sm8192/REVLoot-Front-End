@@ -1,0 +1,20 @@
+body {
+    background-color: rgb(72, 76, 86);
+    overflow: hidden;
+    background-size: cover;
+    width: 100%;
+    min-height: 100vh;
+    color:rgb(255, 255, 255);
+}
+.container {
+    margin-top:17px;
+    margin-left:20px;
+    width:40%;
+}
+.top-buffer {
+    padding-top:20px;
+}
+
+.btn {
+    background-color:rgb(242, 105, 38);
+}
