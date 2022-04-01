@@ -87,7 +87,7 @@ h5{
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     padding-left: 10px;
 }
-#cart{
+/* #cart{
     padding: 5px;
     position: absolute;
     top: 87px;
@@ -99,17 +99,17 @@ h5{
 }
 #cart:hover{
     border: #F26925 3px solid;
-}
+} */
 
 a{ color: #F26925; }
 
 li { cursor: pointer; }
 
-button{
+/* button{
     background-color: #F26925;
     color: #FFFFFF;
     border: none;
-}
+} */
 
 #products{
     height: 38px;
@@ -122,6 +122,27 @@ button{
 #search{
     left: 150px;
     width: 261px;
+}
+
+#dropdownMenuButton1{
+    background: url("src\assets\images\cart.png");
+    background-size: 100%;
+    margin-top: 5px;
+    background-color:white;
+    background-repeat: no-repeat;
+}
+#dd {
+    position: absolute;
+    float: right;
+    top: 87px;
+    right: 30px;
+    width: 50px;
+
+}
+.bb {
+    max-height:250px; 
+    overflow-y:auto;
+    border-radius: 19px;
 }
 
 @media screen and (max-width: 600px) {
@@ -146,3 +167,4 @@ button{
         font-size: 17px;
     }
   }
+
