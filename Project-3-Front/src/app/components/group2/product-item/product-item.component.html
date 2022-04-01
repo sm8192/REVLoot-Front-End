@@ -16,7 +16,7 @@
 
 
             <!-- Input of product Q -->
-            <form  class="item_form text-white" #addToCartForm="ngForm" (submit)="onFormSubmit(addToCartForm.value)">
+            <form  class="item_form text-white" #addToCartForm="ngForm" >
                 <div *ngIf="totalPrice >= 0" class="price_item_total">Total price: <span><b>{{totalPrice | currency}}</b></span></div>
                 <div  *ngIf="totalPrice < 0"class="price_item_total">Total price: <span><b>{{0 | currency}}</b></span></div>
                 <p>In Stock: <b>{{productItem.productQty}}</b></p>
@@ -42,7 +42,7 @@
                 <button class="change_item" (click)="ChangeQ('add')">Add item</button>
                 <button class="change_item" (click)="ChangeQ('remove')">Remove item</button>
 
-                <input  [disabled]="addToCartForm.invalid" type="submit" value="Add to cart" class="addItem" />
+                <input  (click)="onFormSubmit(addToCartForm.value)" [disabled]="addToCartForm.invalid" type="submit" value="Add to cart" class="addItem" />
             </form>
         </div>
     </div>
