@@ -31,4 +31,9 @@ export class NavbarComponent implements OnInit {
       });
   }
 
+  onDropdown(e:Event){
+    e.stopPropagation();
+  }
+
+
 }

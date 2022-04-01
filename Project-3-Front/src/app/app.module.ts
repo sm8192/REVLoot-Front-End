@@ -13,7 +13,6 @@ import { CartComponent } from './components/group3/cart/cart.component';
 import { CheckoutformComponent } from './components/group3/checkoutform/checkoutform.component';
 import { CartdropdownComponent } from './components/group3/cartdropdown/cartdropdown.component';
 import { FooterComponent } from './components/footer/footer.component';
-import { HomeComponent } from './components/group3/home/home.component';
 import { OrdercompleteComponent } from './components/group3/ordercomplete/ordercomplete.component';
 
 @NgModule({
@@ -27,7 +26,6 @@ import { OrdercompleteComponent } from './components/group3/ordercomplete/orderc
     CheckoutformComponent,
     CartComponent,
     NavbarComponent,
-    HomeComponent,
     FooterComponent,
     CartdropdownComponent,
     OrdercompleteComponent

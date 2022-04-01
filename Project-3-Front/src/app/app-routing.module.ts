@@ -5,7 +5,7 @@ import { ProductItemComponent } from './components/group2/product-item/product-i
 import { OrdercompleteComponent } from './components/group3/ordercomplete/ordercomplete.component';
 import { CheckoutformComponent } from './components/group3/checkoutform/checkoutform.component';
 import { CartComponent } from './components/group3/cart/cart.component';
-import { HomeComponent } from './components/group3/home/home.component';
+
 
   
 const routes: Routes = [
@@ -13,7 +13,6 @@ const routes: Routes = [
   { path: 'productItem/:id', component: ProductItemComponent},
   {path: 'checkout', component: CheckoutformComponent},
   {path: 'cart', component: CartComponent},
-  {path: 'home', component: HomeComponent},
   {path: '',   redirectTo: '/productList', pathMatch: 'full'},
   {path: 'ordercomplete', component: OrdercompleteComponent}
 ];
