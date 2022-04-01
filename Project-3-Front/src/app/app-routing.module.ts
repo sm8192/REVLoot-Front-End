@@ -14,7 +14,7 @@ const routes: Routes = [
   {path: 'checkout', component: CheckoutformComponent},
   {path: 'cart', component: CartComponent},
   {path: 'home', component: HomeComponent},
-  {path: '',   redirectTo: '/home', pathMatch: 'full'},
+  {path: '',   redirectTo: '/productList', pathMatch: 'full'},
   {path: 'ordercomplete', component: OrdercompleteComponent}
 ];
 
