@@ -127,6 +127,65 @@
     margin-top: 10px;
 }
 
+.item_content_wrap_title{
+    display: none;
+}
+
+@media (max-width: 400px) {
+    .item_wrapper{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .item_img_wrap{
+        width: 100%;
+    }
+
+    .item_img{
+        border-radius: 5px
+    }
+
+    .item_content_wrap{
+        width: 100%;
+    }
+    
+    .item_cost_wrap{
+        width: 100%;
+    }
+
+    .item_form {
+        width: 100%;
+        box-shadow: none;
+        border-top: 1px solid #80808066;
+        border-radius: 0;    }
+
+    .item_content_title {
+        display: none;
+    }
+
+    .item_content_wrap{
+        padding: 0;
+        margin: 20px 0px;
+    }
+        
+    .item_content_wrap_title {
+        display: block;
+        padding: 0
+    }
+
+    .item_content_title_mobile{
+        margin-bottom: 15px;
+        color: #0F1111;
+        font-family: sans-serif;
+        font-size: 24px!important;
+        line-height: 32px!important;
+    }
+
+    .wrap_center {
+        width: 90%;
+        margin-bottom: 30px;
+    }
+}
 .container {
     padding:50px; 
 }
