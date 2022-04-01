@@ -1,0 +1,15 @@
+img {
+    max-width: 90%;
+    height: auto;
+    box-shadow: 6px 5px 8px #474C55;
+}
+
+button{
+    background-color: #F26925;
+    color: #FFFFFF;
+    border: none;
+}
+
+.card{
+    box-shadow: 6px 4px 8px black;
+}

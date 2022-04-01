@@ -31,6 +31,7 @@
 
 .item_img{
     width: 100%;
+    box-shadow: 6px 5px 8px #474C55;
 }
 
 .item_content_title{
@@ -65,6 +66,7 @@
     width: 290px;
     max-width: 100%;
     box-shadow: 0px 0px 4px 2px #2a230159;
+    background-color: #474C55;
 
 }
 
@@ -84,7 +86,7 @@
 
 .change_item {
    width: 100%;
-   background: rgb(255, 214, 9);
+   background: #72A4C2;
    border: none;
    font-size: 14px;
     padding: 5px;
@@ -98,7 +100,7 @@
     width: 100%;
     border: none;
     border-radius: 5px;
-    background-color: #83daff;
+    background-color: #F26925;
     padding: 10px;
 }
 
@@ -183,4 +185,7 @@
         width: 90%;
         margin-bottom: 30px;
     }
+}
+.container {
+    padding:50px; 
 }

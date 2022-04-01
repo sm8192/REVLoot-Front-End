@@ -1,6 +1,6 @@
 .wrap{
     background-color: black;
-    padding-bottom: 75px;
+    padding-bottom: 25px;
     width: 100%;
     padding-left: 10px;
     padding-top: 10px;
@@ -17,6 +17,7 @@
     transition: 0.5s;
     height: 75px;
     display: inline-block;
+    z-index: 1;
 }
 .navbar:hover{
     opacity: 1.0;
@@ -36,14 +37,6 @@
     position: absolute;
 }
 
-.search {
-    position: absolute;
-    top: 16px;
-    left: 235px;
-    padding: 2px;
-    border-left: 1px solid #d1d5db
-}
-
 .form-input {
     position: absolute;
     margin-top: 20px;
@@ -56,7 +49,7 @@
 }
 
 .form-control{
-    width: 260px;
+   
     text-align: center;
     border: none;
 }
@@ -105,5 +98,51 @@ h5{
     background-color: white;
 }
 #cart:hover{
-    border: orange 3px solid;
+    border: #F26925 3px solid;
 }
+
+a{ color: #F26925; }
+
+li { cursor: pointer; }
+
+button{
+    background-color: #F26925;
+    color: #FFFFFF;
+    border: none;
+}
+
+#products{
+    height: 38px;
+    position: absolute;
+    top: 97px;
+    left: 20px;
+    float: right;
+}
+
+#search{
+    left: 150px;
+    width: 261px;
+}
+
+@media screen and (max-width: 600px) {
+    .nav-small{
+        margin-left: 0px !important;
+        width: 139px !important;
+        
+    }
+    #search{
+        width: 140px !important;
+        left: 100px !important;
+    }
+    #products{
+        margin-left: -10px;
+        width: 70px; 
+        font-size: x-small;
+    }
+    .topleft{
+        padding-left: 5px;
+    }
+    .righta{
+        font-size: 17px;
+    }
+  }
