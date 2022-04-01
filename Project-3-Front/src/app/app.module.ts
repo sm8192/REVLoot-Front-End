@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+
 import {HttpClientModule} from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 
@@ -14,10 +15,15 @@ import { CheckoutformComponent } from './components/group3/checkoutform/checkout
 import { CartdropdownComponent } from './components/group3/cartdropdown/cartdropdown.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { OrdercompleteComponent } from './components/group3/ordercomplete/ordercomplete.component';
+import { LoginComponent } from './components/Login/login/login.component';
+import { RegisterComponent } from './components/Login/register/register.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
+    LoginComponent,
+    RegisterComponent
     SearchPipe,
     ProductListPageComponent,
     ProductItemComponent,
