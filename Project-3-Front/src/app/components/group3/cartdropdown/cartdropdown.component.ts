@@ -13,8 +13,6 @@ export class CartdropdownComponent implements OnInit {
   quantities: number[] = [10,15,16]
 
   constructor(private route:ActivatedRoute, public cartService: CartService) {
-    
-    cartService.fillCart()
   }
 
   ngOnInit(): void {
@@ -22,7 +20,7 @@ export class CartdropdownComponent implements OnInit {
 
 
   increaseToCart(item: Item){
-    this.cartService.increaseQuantity(item)
+    this.cartService.increaseQuantity(item,1)
   }
   reduceFromCart(item: Item){
     this.cartService.reduceQuantity(item)

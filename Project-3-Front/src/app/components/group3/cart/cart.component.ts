@@ -20,7 +20,6 @@ export class CartComponent implements OnInit {
   subTotal: number = 0;
 
   constructor(private route:ActivatedRoute, public cartService: CartService) {
-//    cartService.fillCart()
     this.calculatePrice()
     this.quantities = this.cartService.getQuantities(cartService.getCart())
   }
@@ -30,7 +29,7 @@ export class CartComponent implements OnInit {
 
 
   increaseToCart(item: Item){
-    this.cartService.increaseQuantity(item)
+    this.cartService.increaseQuantity(item,1)
     this.calculatePrice()
   }
   reduceFromCart(item: Item){

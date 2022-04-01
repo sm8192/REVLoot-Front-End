@@ -30,13 +30,19 @@ export class CartService {
   }
   }
 
-  increaseQuantity(newItem: Item){
+  increaseQuantity(newItem: Item, increase: number){
     let alreadyInCart = false;
     this.cart.forEach(item => {
       if(newItem.id == item.id)
       {
         alreadyInCart = true;
-        item.productQty++
+        let repeats = increase;
+        while (repeats > 0)
+        {
+          item.productQty++
+          repeats--
+        }
+
         if(item.productQty >= 99)
         {
           item.productQty = 99

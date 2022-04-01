@@ -29,11 +29,13 @@ export class ProductItemComponent implements OnInit {
 
   onFormSubmit(data: any){
     console.log(data)
-//    this.cartService.addItem(data)
-    //Uncommit when change to new obj for cart
-    // this.productService.addProduct(this.productItem).subscribe(resp => {
-    //   this.router.navigateByUrl("product-list");
-  //  })
+    this.cartService.addItem(data)
+    if (this.orderCount > 1)
+    {
+      this.cartService.increaseQuantity(data, this.orderCount)
+    }
+    this.orderCount = 0
+    this.router.navigateByUrl("productList");
   }
 
   ChangeQ(e: any){
