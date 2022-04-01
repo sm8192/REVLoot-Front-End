@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
-import {HttpClientModule} from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
-
+import { HttpClientModule } from "@angular/common/http";
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { SearchPipe } from './pipes/search.pipe';
+import { LoginComponent } from './components/Login/login/login.component';
+import { RegisterComponent } from './components/Login/register/register.component';
 import { ProductListPageComponent } from './components/group2/product-list-page/product-list-page.component';
 import { ProductItemComponent } from './components/group2/product-item/product-item.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
@@ -15,16 +15,13 @@ import { CheckoutformComponent } from './components/group3/checkoutform/checkout
 import { CartdropdownComponent } from './components/group3/cartdropdown/cartdropdown.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { OrdercompleteComponent } from './components/group3/ordercomplete/ordercomplete.component';
-import { LoginComponent } from './components/Login/login/login.component';
-import { RegisterComponent } from './components/Login/register/register.component';
-
+import { SearchPipe } from './pipes/search.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    RegisterComponent
-    SearchPipe,
+    RegisterComponent,
     ProductListPageComponent,
     ProductItemComponent,
     NavbarComponent,
@@ -34,13 +31,14 @@ import { RegisterComponent } from './components/Login/register/register.componen
     NavbarComponent,
     FooterComponent,
     CartdropdownComponent,
-    OrdercompleteComponent
+    OrdercompleteComponent,
+    SearchPipe
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
