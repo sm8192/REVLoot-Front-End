@@ -5,7 +5,9 @@
 <body>
    <div class="CartContainer">
    	   <div class="Header">
-		<button [disabled]="(cartService.getCartLength()==0)" routerLink="/cart" class="button">View cart</button></div>
+		<button *ngIf="(cartService.getCartLength()!=0)" routerLink="/cart" class="button">View cart</button>
+		<h5 *ngIf="(cartService.getCartLength()==0)">Nothing in cart!</h5>
+	</div>
    	   </div>
    	   <div class="Cart-Items" *ngFor="let item of cartService.getCart();index as i;">
    	   	  <div class="about">

@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 import { CartService } from 'src/app/services/cart.service';
-import { Item } from 'src/app/classes/item';
+import { Item } from 'src/app/services/item';
+import { UserService } from 'src/app/services/user.service';
 
 @Component({
   selector: 'app-cart',
@@ -19,7 +20,7 @@ export class CartComponent implements OnInit {
 
   subTotal: number = 0;
 
-  constructor(private route:ActivatedRoute, public cartService: CartService) {
+  constructor(private route:ActivatedRoute, public cartService: CartService, public user: UserService) {
     this.calculatePrice()
     this.quantities = this.cartService.getQuantities(cartService.getCart())
   }
