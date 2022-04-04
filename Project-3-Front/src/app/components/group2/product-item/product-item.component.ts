@@ -70,7 +70,6 @@ export class ProductItemComponent implements OnInit {
       this.cartService.increaseQuantity(this.productItem, this.orderCount)
     }
     this.orderCount = 0
-    this.orderCount = 0
     if(!this.user.isUserLoggedIn())
     {
       this.router.navigateByUrl("login")
