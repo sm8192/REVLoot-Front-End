@@ -20,7 +20,7 @@ export class CartComponent implements OnInit {
 
   subTotal: number = 0;
 
-  constructor(private route:ActivatedRoute, public cartService: CartService, public user: UserService) {
+  constructor(private route:ActivatedRoute, public cartService: CartService, public user: UserService, private router: Router) {
     this.calculatePrice()
     this.quantities = this.cartService.getQuantities(cartService.getCart())
   }
@@ -60,9 +60,7 @@ export class CartComponent implements OnInit {
   }
 
   checkout(){
-    alert("Checking Out!")
-    this.cartService.checkoutCart()
-    alert("Checked Out!")
+    this.router.navigateByUrl("checkout")
   }
   isUserLoggedIn(){
     return this.user.isUserLoggedIn();

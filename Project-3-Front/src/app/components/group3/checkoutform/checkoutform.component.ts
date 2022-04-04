@@ -13,12 +13,13 @@ export class CheckoutformComponent implements OnInit {
 
 
 
-  constructor(private route:ActivatedRoute, private cartService:CartService) { }
+  constructor(private route:ActivatedRoute, private cartService:CartService, private router: Router) { }
 
   ngOnInit(): void {}
 
   onsubmit(checkoutform:NgForm) {
-   this.cartService.checkoutCart()
+  this.cartService.checkoutCart()
+   this.router.navigateByUrl("productList")
   }
 
 }
