@@ -163,8 +163,11 @@
                 <div class="col-sm-6">
                     <div class="form-group">
                         <label for="">Card number</label>
-                        <input type="text" class="form-control" name="card" #card="ngModel" ngModel required [class.is-invalid]="card.invalid && card.touched">
+                        <input type="text" class="form-control" name="card" #card="ngModel" ngModel required [class.is-invalid]="card.invalid && card.touched" pattern="(^\d{16}$)|(^\d{16}-\d{15}$)">
                     </div>    
+                    <div *ngIf="card.errors && (card.invalid || card.touched)">
+                        <small style="text-align: bottom;" class="text-danger" *ngIf="card.errors['pattern']">Not a valid 16 digit Card number</small>
+                    </div>  
                 </div>
                 <div class="row">
                     <div class="col-sm-4">
