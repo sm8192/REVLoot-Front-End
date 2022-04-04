@@ -16,6 +16,7 @@ export class ProductItemComponent implements OnInit {
   id: any;
   orderedItems = 0;
   orderCount = 0;
+  inventory: any;
 
   constructor(private route: ActivatedRoute, private productService: ProductService,private cartService: CartService, private router: Router) { }
 
@@ -24,6 +25,7 @@ export class ProductItemComponent implements OnInit {
     this.productService.getProductById(this.id).subscribe(resp => { 
       this.productItem = resp;
       console.log(this.productItem)
+      this.inventory = this.productItem.productQty
     })
   }
 
@@ -55,4 +57,14 @@ export class ProductItemComponent implements OnInit {
   get totalPrice(){
     return this.orderCount * this.productItem.price;
   }
+
+  onClick(){
+    this.cartService.addItem(this.productItem)
+    if (this.orderCount > 1)
+    {
+      this.cartService.increaseQuantity(this.productItem, this.orderCount)
+    }
+    this.orderCount = 0
+  }
+
 }
