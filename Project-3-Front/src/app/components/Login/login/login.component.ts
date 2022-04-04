@@ -28,7 +28,7 @@ export class LoginComponent implements OnInit {
       this.errorMsg = error.error.message;
       localStorage.removeItem("username");
       console.log(this.errorMsg);
-      this.router.navigateByUrl("productList")
+      this.router.navigateByUrl("login")
     })
 
   }
