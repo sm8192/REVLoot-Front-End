@@ -2,7 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ProductService } from 'src/app/services/product.service';
 import { CartService } from 'src/app/services/cart.service';
-import { Item } from 'src/app/classes/item';
+import { Item } from 'src/app/services/item';
+import { UserService } from 'src/app/services/user.service';
 
 @Component({
   selector: 'app-product-item',
@@ -18,7 +19,7 @@ export class ProductItemComponent implements OnInit {
   orderCount = 0;
   inventory: any;
 
-  constructor(private route: ActivatedRoute, private productService: ProductService,private cartService: CartService, private router: Router) { }
+  constructor(private route: ActivatedRoute, private productService: ProductService,private cartService: CartService, private router: Router, private user: UserService) { }
 
   ngOnInit(): void {
     this.id = this.route.snapshot.paramMap.get("id")
@@ -30,14 +31,18 @@ export class ProductItemComponent implements OnInit {
   }
 
   onFormSubmit(data: any){
-    console.log(data)
+    /* console.log(data)
     this.cartService.addItem(data)
     if (this.orderCount > 1)
     {
       this.cartService.increaseQuantity(data, this.orderCount)
     }
     this.orderCount = 0
-    this.router.navigateByUrl("productList");
+    if(!this.user.isUserLoggedIn())
+    {
+      this.router.navigateByUrl("login")
+    }
+    this.router.navigateByUrl("productList"); */
   }
 
   ChangeQ(e: any){
@@ -65,6 +70,12 @@ export class ProductItemComponent implements OnInit {
       this.cartService.increaseQuantity(this.productItem, this.orderCount)
     }
     this.orderCount = 0
+    this.orderCount = 0
+    if(!this.user.isUserLoggedIn())
+    {
+      this.router.navigateByUrl("login")
+    }
+    this.router.navigateByUrl("productList");
   }
 
 }

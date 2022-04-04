@@ -7,3 +7,10 @@ button{
     background-color: #F26925;
     border: none;
 }
+
+app-root {
+    min-height: 100%;
+    display: block;
+    position: relative;
+    padding-bottom: 156px;
+}

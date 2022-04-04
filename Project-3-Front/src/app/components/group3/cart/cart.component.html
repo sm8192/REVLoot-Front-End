@@ -6,13 +6,13 @@
    <div class="CartContainer">
    	   <div class="Header">
    	   	<h5 class="Heading">Order Summary</h5>
-   	   	<h6 class="Action">Remove All</h6>
+   	   	<h6 class="Action" *ngIf="cartService.getCartLength() != 0">Remove All</h6>
    	   </div>
 		  <hr>
 		  <div class="noCart" *ngIf="cartService.getCartLength() == 0">
 			<h1>There are no items in cart. Would you like to get started?</h1>
 			<!-- If user is not logged in -->
-			<div class="noUser">
+			<div class="noUser" *ngIf="this.user.isUserLoggedIn">
 				<h5>Get started by creating <br>an account</h5>
 				<a class="noRef" routerLink="/register">Create Account</a>
 			</div><br>

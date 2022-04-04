@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { waitForAsync } from '@angular/core/testing';
 import { elementAt } from 'rxjs';
 import { CheckoutserviceService } from './checkoutservice.service';
-import { Item } from '../classes/item';
+import { Item } from './item';
 
 @Injectable({
   providedIn: 'root'
@@ -36,13 +36,7 @@ export class CartService {
       if(newItem.id == item.id)
       {
         alreadyInCart = true;
-        let repeats = increase - 1;
-        while (repeats > 0)
-        {
-          item.productQty++
-          repeats--
-        }
-
+        item.productQty++
         if(item.productQty >= 99)
         {
           item.productQty = 99
