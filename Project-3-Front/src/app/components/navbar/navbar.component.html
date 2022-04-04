@@ -1,45 +1,76 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <title>Navbar</title>
-</head>
-<body>
-    <body>
-        <div class="wrap">
-            <div class="top text-white">
-                <h5 class="topleft">Already Have An Account? <a routerLink="/login">Login Here</a></h5>
-                <h5 class="topright">Need To Make An Account? <span class="righta"><a routerLink="/register">Create Account</a></span></h5>
-            </div>
-            <nav class="navbar">
-                <a routerLink="" id="logo"><img src="https://revature.com/wp-content/themes/revature/imgs/logo-white-color.png" alt=""></a>                    
-                <div class="content" role="main" style="margin-top: 30px;">
-                    <div class="card" id="search">
-                      <div class="form-group nav-small">
-                        <input type="email" class="form-control" id="search-text" aria-describedby="search-text" 
-                          [(ngModel)]='searchText' placeholder="Search For A Product" 
-                          autofocus>
-                      </div>
-                      <div *ngIf="searchText == undefined ||  searchText == ''; then thenBlock; else elseBlock" ></div>
-                      <ng-template #thenBlock></ng-template>
-                        
-                      <ng-template #elseBlock>
-                        <ul class="list-group list-group-flush">
-                            <li class="list-group-item" *ngFor="let product of productList | search: searchText | slice:0:10; let i=index" (click)="onClick(product)" >
-                            {{product}}
-                            </li>
-                        </ul>
-                      </ng-template>
+<div class="wrap" *ngIf="!isUserLoggedIn(); else loggedIn">
+    <div class="top text-white">
+        <h5 class="topleft">Already Have An Account? <a routerLink="/login">Login Here</a></h5>
+        <h5 class="topright">Need To Make An Account? <span class="righta"><a routerLink="/register">Create Account</a></span></h5>
+    </div>
+    <nav class="navbar">
+        <a routerLink="" id="logo"><img src="https://revature.com/wp-content/themes/revature/imgs/logo-white-color.png" alt=""></a>                    
+        <div class="content" role="main" style="margin-top: 30px;">
+            <div class="card" id="search">
+              <div class="form-group nav-small">
+                <input type="email" class="form-control" id="search-text" aria-describedby="search-text" 
+                  [(ngModel)]='searchText' placeholder="Search For A Product" 
+                  autofocus>
+              </div>
+              <div *ngIf="searchText == undefined ||  searchText == ''; then thenBlock; else elseBlock" ></div>
+              <ng-template #thenBlock></ng-template>
                 
-                    </div>
-                </div>
-                <div class="dropdown" id="dd" (click)="onDropdown($event)">
-                    <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                    </button>
-                    <ul class="dropdown-menu dropdown-menu-end bb" aria-labelledby="dropdownMenuButton1">
-                        <app-cartdropdown></app-cartdropdown>
-                    </ul>
-                  </div>                  
-            </nav>
+              <ng-template #elseBlock>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item" *ngFor="let product of productList | search: searchText | slice:0:10; let i=index" (click)="onClick(product)" >
+                    {{product}}
+                    </li>
+                </ul>
+              </ng-template>
+        
+            </div>
         </div>
-    </body>
-</body>
+        <div class="dropdown" id="dd" (click)="onDropdown($event)">
+            <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end bb" aria-labelledby="dropdownMenuButton1">
+                <app-cartdropdown></app-cartdropdown>
+            </ul>
+          </div>                  
+    </nav>
+</div>
+
+<ng-template #loggedIn>
+    <div class="wrap">
+        <div class="top text-white">            
+            <h5 class="topright"><span class="righta"><a (click)="logOut()">Log Out</a></span></h5>
+        </div>
+        <nav class="navbar">
+            <a routerLink="" id="logo"><img src="https://revature.com/wp-content/themes/revature/imgs/logo-white-color.png" alt=""></a>                    
+            <div class="content" role="main" style="margin-top: 30px;">
+                <div class="card" id="search">
+                  <div class="form-group nav-small">
+                    <input type="email" class="form-control" id="search-text" aria-describedby="search-text" 
+                      [(ngModel)]='searchText' placeholder="Search For A Product" 
+                      autofocus>
+                  </div>
+                  <div *ngIf="searchText == undefined ||  searchText == ''; then thenBlock; else elseBlock" ></div>
+                  <ng-template #thenBlock></ng-template>
+                    
+                  <ng-template #elseBlock>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item" *ngFor="let product of productList | search: searchText | slice:0:10; let i=index" (click)="onClick(product)" >
+                        {{product}}
+                        </li>
+                    </ul>
+                  </ng-template>
+            
+                </div>
+            </div>
+            <div class="dropdown" id="dd" (click)="onDropdown($event)">
+                <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                </button>
+                <ul class="dropdown-menu dropdown-menu-end bb" aria-labelledby="dropdownMenuButton1">
+                    <app-cartdropdown></app-cartdropdown>
+                </ul>
+              </div>                  
+        </nav>
+    </div>
+</ng-template>
+
+

@@ -1,11 +1,8 @@
-<head>
-	<title>Shopping Cart UI</title>
-    <base routerLink="/cart">
-</head>
+
 <body>
    <div class="CartContainer">
    	   <div class="Header">
-		<button [disabled]="(cartService.getCartLength()==0)" routerLink="/cart" class="button">View cart</button></div>
+		<button  routerLink="/cart" class="button">View cart</button></div>
    	   </div>
    	   <div class="Cart-Items" *ngFor="let item of cartService.getCart();index as i;">
    	   	  <div class="about">
