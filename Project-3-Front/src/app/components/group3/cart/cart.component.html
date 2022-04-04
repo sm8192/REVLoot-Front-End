@@ -22,7 +22,7 @@
 			<div><strong>Total:</strong>
 				<div class="TotalPrice">{{this.cartPrice | currency}}</div>
 			</div>
-			<button [disabled]="(cartService.getCartLength()==0)"  class="button">Checkout</button>
+			<button [disabled]="(cartService.getCartLength()==0)" routerLink="/checkout" class="button">Checkout</button>
 		</div>
 	</div>
    <div class="CartContainer">
