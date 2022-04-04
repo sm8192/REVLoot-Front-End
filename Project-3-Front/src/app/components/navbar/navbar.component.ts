@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ProductService } from 'src/app/services/product.service';
+import { UserService } from 'src/app/services/user.service';
 
 @Component({
   selector: 'app-navbar',
@@ -14,7 +15,7 @@ export class NavbarComponent implements OnInit {
   productList: any[] = [];
   item: any;
 
-  constructor(private router:Router, private productService: ProductService) { }
+  constructor(private router:Router, private productService: ProductService, public user: UserService) { }
 
   ngOnInit(): void {
     this.productService.getProductNames().subscribe(data => this.productList = data)

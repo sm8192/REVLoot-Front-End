@@ -7,8 +7,8 @@
     <body>
         <div class="wrap">
             <div class="top text-white">
-                <h5 class="topleft">Already Have An Account? <a routerLink="/login">Login Here</a></h5>
-                <h5 class="topright">Need To Make An Account? <span class="righta"><a routerLink="/register">Create Account</a></span></h5>
+                <h5 class="topleft" *ngIf="!this.user.isUserLoggedIn">Already Have An Account? <a routerLink="/login">Login Here</a></h5>
+                <h5 class="topright" *ngIf="!this.user.isUserLoggedIn">Need To Make An Account? <span class="righta"><a routerLink="/register">Create Account</a></span></h5>
             </div>
             <nav class="navbar">
                 <a routerLink="" id="logo"><img src="https://revature.com/wp-content/themes/revature/imgs/logo-white-color.png" alt=""></a>                    
@@ -32,7 +32,7 @@
                 
                     </div>
                 </div>
-                <div class="dropdown" id="dd" (click)="onDropdown($event)">
+                <div class="dropdown" id="dd" (click)="onDropdown($event)" *ngIf="this.user.isUserLoggedIn">
                     <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
                     </button>
                     <ul class="dropdown-menu dropdown-menu-end bb" aria-labelledby="dropdownMenuButton1">
