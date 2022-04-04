@@ -65,6 +65,9 @@ export class CartComponent implements OnInit {
     this.cartService.checkoutCart()
     alert("Checked Out!")
   }
+  isUserLoggedIn(){
+    return this.user.isUserLoggedIn();
+  }
 
 }
 

@@ -19,15 +19,13 @@ export class LoginComponent implements OnInit {
   }
   onSubmit(value:any): void {
     this.service.getUserByCredentials(value.form.value.email, value.form.value.password).subscribe(response => {
-      this.errorMsg = "";
-      console.log(response);
+      this.errorMsg = "";      
       localStorage.setItem("username", response.email)
       this.router.navigateByUrl("productList")
     }, error => {
       console.log(error);
       this.errorMsg = error.error.message;
-      localStorage.removeItem("username");
-      console.log(this.errorMsg);
+      localStorage.removeItem("username");      
       this.router.navigateByUrl("login")
     })
 
