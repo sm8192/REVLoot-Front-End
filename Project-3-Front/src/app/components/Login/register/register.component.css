@@ -15,3 +15,15 @@
 #button{
     background-color:  #F26925;
 }
+
+a {
+    color: #F26925;
+}
+
+.btn-outline{
+    border-color: #F26925;
+}
+
+#login {
+    color: white;
+}

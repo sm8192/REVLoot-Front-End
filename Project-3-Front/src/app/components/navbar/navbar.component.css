@@ -105,11 +105,11 @@ a{ color: #F26925; }
 
 li { cursor: pointer; }
 
-/* button{
+button{
     background-color: #F26925;
     color: #FFFFFF;
     border: none;
-} */
+}
 
 #products{
     height: 38px;
