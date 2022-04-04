@@ -63,5 +63,6 @@
 			</div>
 			<button [disabled]="(cartService.getCartLength()==0) || !isUserLoggedIn()"  class="button" >Checkout</button>
 		</div>
+		<button [disabled]="(cartService.getCartLength()==0)" routerLink="/checkout" class="button">Checkout</button>
 	</div>
 </div>

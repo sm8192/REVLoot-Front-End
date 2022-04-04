@@ -37,7 +37,6 @@ export class CartComponent implements OnInit {
     this.cartService.reduceQuantity(item)
         this.calculatePrice()
   }
-  
   removeFromCart(item: Item, index: number){
     let tempLength = this.cartService.getCartLength()
     this.cartService.removeItem(item)
