@@ -225,7 +225,7 @@ hr{
 
 	font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
-@media (max-width: 400px){
+@media (max-width: 600px){
 	.CartContainer{
 		display: flex !important;
         flex-direction: column !important;

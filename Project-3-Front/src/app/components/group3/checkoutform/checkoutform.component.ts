@@ -18,7 +18,7 @@ export class CheckoutformComponent implements OnInit {
   ngOnInit(): void {}
 
   onsubmit(checkoutform:NgForm) {
-//    this.cartService.checkoutCart()
+   this.cartService.checkoutCart()
   }
 
 }
