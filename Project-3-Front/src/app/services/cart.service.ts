@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { waitForAsync } from '@angular/core/testing';
 import { elementAt } from 'rxjs';
 import { CheckoutserviceService } from './checkoutservice.service';
-import { Item } from './item';
+import { Item } from '../classes/item';
 
 @Injectable({
   providedIn: 'root'

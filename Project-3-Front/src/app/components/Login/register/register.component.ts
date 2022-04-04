@@ -31,6 +31,5 @@ onSubmit(data: any){//does not do anything yet just put it here to get rid of er
     localStorage.removeItem("username");
     console.log(this.errorMsg);
   });
-
 }
 }
