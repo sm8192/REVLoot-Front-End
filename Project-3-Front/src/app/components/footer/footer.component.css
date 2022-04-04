@@ -9,9 +9,9 @@
   padding-top:15px;
   display: block;
   background-color: #72A4C2;
-  position: relative;
+  bottom: 0;
+  position: absolute;
   width: 100%;
-  top: 1100px;
   display: flex;
   justify-content: center;  
 }
