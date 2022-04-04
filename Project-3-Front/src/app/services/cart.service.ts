@@ -36,13 +36,7 @@ export class CartService {
       if(newItem.id == item.id)
       {
         alreadyInCart = true;
-        let repeats = increase - 1;
-        while (repeats > 0)
-        {
-          item.productQty++
-          repeats--
-        }
-
+        item.productQty++
         if(item.productQty >= 99)
         {
           item.productQty = 99
