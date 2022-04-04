@@ -3,6 +3,31 @@
     <base routerLink="/cart">
 </head>
 <body>
+<<<<<<< HEAD
+=======
+	<div class="checkout">
+		<div class="total">
+			<div>
+				<div class="Subtotal"><strong>Price:</strong></div>
+				<div class="items">{{this.cartService.getCartLength()}} items</div>
+			<div class="Shipping">Shipping:</div>
+			<div class="Tax">Tax:</div>
+			</div>
+			<div class="sub-amount">
+			<div>{{this.subTotal| currency}}</div>
+			<div class="ShippingPrice">{{this.shipping | currency}}</div>
+			<div class="Tax">{{this.tax | currency}}</div>
+		</div>
+		</div>
+		<hr><br>
+		<div class="Total">
+			<div><strong>Total:</strong>
+				<div class="TotalPrice">{{this.cartPrice | currency}}</div>
+			</div>
+			<button [disabled]="(cartService.getCartLength()==0)" routerLink="/checkout" class="button">Checkout</button>
+		</div>
+	</div>
+>>>>>>> becf274000892594e30ec75199011cdad216cae1
    <div class="CartContainer">
    	   <div class="Header">
    	   	<h5 class="Heading">Order Summary</h5>

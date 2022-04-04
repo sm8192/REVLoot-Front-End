@@ -42,7 +42,7 @@
                 <button class="change_item" type="button" (click)="ChangeQ('add')">Add item</button>
                 <button class="change_item" type="button" (click)="ChangeQ('remove')">Remove item</button>
 
-                <input  [disabled]="addToCartForm.invalid" type="submit" value="Add to cart" class="addItem" />
+                <input  [disabled]="addToCartForm.invalid" type="submit" value="Add to cart" class="addItem" (click)="onClick()"/>
             </form>
         </div>
     </div>
