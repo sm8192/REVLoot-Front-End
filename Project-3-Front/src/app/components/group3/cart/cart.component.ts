@@ -30,7 +30,7 @@ export class CartComponent implements OnInit {
 
 
   increaseToCart(item: Item){
-    this.cartService.increaseQuantity(item,1)
+    this.cartService.increaseQuantity(item,2)
     this.calculatePrice()
   }
   reduceFromCart(item: Item){
