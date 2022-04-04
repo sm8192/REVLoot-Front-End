@@ -12,7 +12,7 @@
 		  <div class="noCart" *ngIf="cartService.getCartLength() == 0">
 			<h1>There are no items in cart. Would you like to get started?</h1>
 			<!-- If user is not logged in -->
-			<div class="noUser" *ngIf="this.user.isUserLoggedIn">
+			<div class="noUser">
 				<h5>Get started by creating <br>an account</h5>
 				<a class="noRef" routerLink="/register">Create Account</a>
 			</div><br>
@@ -64,7 +64,7 @@
 		<div><strong>Total:</strong>
 			<div class="TotalPrice">{{this.cartPrice | currency}}</div>
 		</div>
-		<button [disabled]="(cartService.getCartLength()==0)"  class="button">Checkout</button>
+		<button [disabled]="(cartService.getCartLength()==0)" routerLink="/checkout" class="button">Checkout</button>
 	</div>
 </div>
 </body>
