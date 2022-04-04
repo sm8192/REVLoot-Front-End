@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { waitForAsync } from '@angular/core/testing';
 import { elementAt } from 'rxjs';
 import { CheckoutserviceService } from './checkoutservice.service';
-import { Item } from './item';
+import { Item } from '../classes/item';
 
 @Injectable({
   providedIn: 'root'
@@ -91,14 +91,13 @@ export class CartService {
   }
 
   checkoutCart(){
-    this.cart.forEach((element) =>
+    this.cart.forEach((element, index) =>
     {
       this.checkout.getItem(element.id).subscribe((data) => {
         data.productQty-=element.productQty;
-        this.checkout.updateItem(data)})
+        this.checkout.updateItem(data).subscribe(() => this.cart.splice(index, 1));
+      })
     });
-    
-    this.emptyCart()
   }
 
   emptyCart(){

@@ -17,7 +17,7 @@ const routes: Routes = [
   {path: 'checkout', component: CheckoutformComponent},
   {path: 'cart', component: CartComponent},
   {path: '', redirectTo: '/productList', pathMatch: 'full'},
-  {path: 'ordercomplete', component: OrdercompleteComponent}
+  {path: 'orderComplete', component: OrdercompleteComponent}
 ];
 
 @NgModule({

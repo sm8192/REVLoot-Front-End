@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from '@angular/common/http'
 import { Observable } from 'rxjs';
-import { Item } from './item';
+import { Item } from '../classes/item';
 
 @Injectable({
   providedIn: 'root'
@@ -20,8 +20,8 @@ export class CheckoutserviceService {
     return this.http.get<Item>(this.url + "/" + id)
   }
 
-  updateItem(item: Item){
-    this.http.put(this.url + "/" + item.id, item )
+  updateItem(item: Item): Observable<any>{
+    return this.http.put<any>(this.url + "/" + item.id, item )
   }
 
 }
