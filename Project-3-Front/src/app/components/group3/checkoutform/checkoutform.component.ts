@@ -19,7 +19,7 @@ export class CheckoutformComponent implements OnInit {
 
   onsubmit(checkoutform:NgForm) {
   this.cartService.checkoutCart()
-   this.router.navigateByUrl("productList")
+   this.router.navigateByUrl("ordercomplete")
   }
 
 }
