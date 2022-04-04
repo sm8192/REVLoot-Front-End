@@ -6,7 +6,7 @@
    <div class="CartContainer">
    	   <div class="Header">
    	   	<h5 class="Heading">Order Summary</h5>
-   	   	<h6 class="Action" *ngIf="cartService.getCartLength() != 0">Remove All</h6>
+   	   	<h6 class="Action" *ngIf="cartService.getCartLength() != 0" (click)="cartService.emptyCart()">Remove All</h6>
    	   </div>
 		  <hr>
 		  <div class="noCart" *ngIf="cartService.getCartLength() == 0">
