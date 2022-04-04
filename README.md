@@ -16,7 +16,7 @@
 - Scrum Master - Shane Moorhead
 
 Group 1: Login / Register
-Team lead : Vivian Anderson
+- Team lead : Vivian Anderson
 - Alexander Seith
 - Angeudy Brisita
 - Antonio Lewis
@@ -24,7 +24,7 @@ Team lead : Vivian Anderson
 - William Fuente
 
 Group 2: Display Products / Search Products / Quantity Select
-Team lead :Christian Gonzalez
+- Team lead :Christian Gonzalez
 - Shawn Boutte
 - Elliot Culbertson
 - Sergey Maslinlikov
@@ -32,13 +32,13 @@ Team lead :Christian Gonzalez
 - John Ngan
 
 Group 3: Checkout / Cart
-Team lead : Michael Butera
+- Team lead : Michael Butera
 - Nikhil pradeep
 - Curtis Morris
 - Hunter Melcher
 
 Group 4: Startup Documentation / General Documentation
-Team lead : Shaun Broderick
+- Team lead : Shaun Broderick
 - Jeffrey España 
 - Shaun Broderick
 - Benjamin Madison
