@@ -1,7 +1,9 @@
 .container {
     margin: auto;
- margin-top: 80px;
-        border-radius: 30px;
+    margin-top: 80px;
+    margin-bottom: 170px;
+    border-radius: 30px;
+    min-height: 100%
 }
 .card-body {
     background-color: rgb(72, 76, 86);
