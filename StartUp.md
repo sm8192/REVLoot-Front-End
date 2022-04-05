@@ -12,6 +12,11 @@ Once you have Angular CLI and the appropriate JDK(s) installed, clone the RevLoo
 
 You would want to restore dependencies or install dependencies yourself, in order to avoid any dependency errors. 
 
+REVLoot Front-End and Back-End:
+https://github.com/sm8192/REVLoot-Front-End.git
+https://github.com/sm8192/REVLoot-Back-End.git
+
+
 # The Startup class
 - Registry is the fisrt class to be executed when we launch the application.
 
