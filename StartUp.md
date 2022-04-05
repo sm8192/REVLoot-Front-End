@@ -18,7 +18,7 @@ https://github.com/sm8192/REVLoot-Back-End.git
 
 
 # The Startup class  <img src="https://img.shields.io/badge/RevLoot-Start-blue"/>
--Service-Registry is the fisrt class to be executed when we launch the application.
+- Service-Registry is the fisrt class to be executed when we launch the application.
 
 #### We can distinguish the following setups:   
 <img src="https://img.shields.io/badge/RevLoot-Setups-lightgrey"/>  
@@ -30,9 +30,9 @@ https://github.com/sm8192/REVLoot-Back-End.git
  alt="Front-End Jenkins"
  style="float: left; margin-right: 10px" 
   width="350"/>                    
-- Config-Server: 
-- Login-Service:
-- Product-Service
-- Cloud-Gateway:
-- 
+- Config-Server: Initialize and configures the blank to enable DI.
+- Login-Service: Implements UserController REST Api
+- Product-Service: Implements product details, images, pricing and name.
+- Cloud-Gateway: Implements cloud based storage database 
+
 
