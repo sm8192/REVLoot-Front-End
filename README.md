@@ -1,21 +1,19 @@
-# REVLoot-Front-End
+# REVLoot-Front-End <img src="https://img.shields.io/badge/RevLoot-Front--End-orange"/>
 
 ## Project Description
 RevLoot supports a larger strategic framework to enable other developers, designers, and programmers to develop and add new functions/enhancements. Its primary design implements an e-commerce application for the company Revature.  Revloot provides users the ability to view all products and services promoted by the company for purchase.  Ranging from $0.00 and up, shoppers can add services/products to their shopping cart, edit the shopping cart as well as remove items from the cart.  Items can be added in multiple quantities, from various categories all simultaneously.  
 
 Revloot provides users the ability to set up an account, and store login details which can be modified or deleted by the user at any time.  Setup is simple, as password hashing is enabled, which allows the user to focus on tailoring their profile for individuality or as a company.  The application provides the user a pleasurable shopping experience while embodying the company’s slogan **“Designed for ease. Loved for style”.**
 
-## Technologies Used  
-**Front-End**
-
-
+## Technologies Used  <img src="https://img.shields.io/badge/Technology-Use-orange"/>
+**Front-End**  <img src="https://img.shields.io/badge/Front-End--User-blue"/>
 - Javascript
 - HTML
 - CSS
 - Bootstrap 5.1 & Bootstrap Icons
 - Angular CLI  version 13.2.5
 
-**Backend**
+**Backend**  <img src="https://img.shields.io/badge/Back-End--User-success"/>
 
 * Jenkins
 * H2 Database
@@ -25,7 +23,7 @@ Revloot provides users the ability to set up an account, and store login details
 - Hibernate
 - Intellij Version: 2021.3.3
 
-## Features
+## Features  <img src="https://img.shields.io/badge/Key-Features-important"/>
 + Login
 - Register for account
 * Display Products
@@ -55,7 +53,7 @@ Run ng serve for a dev server. Navigate to http://localhost:4200/. The app will 
 
 
 
-# Usage
+# Usage  <img src="https://img.shields.io/badge/Primary-Use-informational"/>
 Customers of our app will be able to log in to their accounts if they already have an account with us or will be able to register a new account. Should the user enter invalid credentials, an error message will appear, and access to their account will not be possible. The app will prompt them to enter valid credentials or register an account.    
 
 Customers will be able to add products to their shopping carts, modify the quantity of the product, and simultaneously, the total price of the goods will be updated on the fly. Additionally, customers will be able to remove all products from their shopping cart should they wish to. As can be seen on the screenshot, the shipping fee and taxes are added to the total price on the bottom portion of the checkout screen.    Should the customer enter a zero or invalid number for the quantity, the add to my cart button will be disabled.   
@@ -90,7 +88,7 @@ alt="User Login"
  width="200"/> 
 
 
-# Collaborators
+# Collaborators  <img src="https://img.shields.io/badge/RevLoot-Team-orange"/>
 *Scrum Master - Shane Moorhead*
 
 **Team I:** Login / Register
