@@ -2,7 +2,7 @@
 	<title>Shopping Cart UI</title>
     <base routerLink="/cart">
 </head>
-<body>
+<div class="container">
    <div class="CartContainer">
    	   <div class="Header">
    	   	<h5 class="Heading">Order Summary</h5>
@@ -67,4 +67,4 @@
 		<button [disabled]="(cartService.getCartLength()==0)" routerLink="/checkout" class="button">Checkout</button>
 	</div>
 </div>
-</body>
+</div>
