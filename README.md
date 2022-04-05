@@ -91,7 +91,7 @@ alt="User Login"
 
 
 # Collaborators
-- *Scrum Master - Shane Moorhead*
+*Scrum Master - Shane Moorhead*
 
 **Team I:** Login / Register
  Team lead : Vivian Anderson
