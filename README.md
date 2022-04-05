@@ -113,7 +113,7 @@ Team lead : Michael Butera
 - Curtis Morris
 - Hunter Melcher
 
-**Team IV:** Startup Documentation / General Documentation
+**Team IV:** Startup Documentation / General Documentation  
 Team lead : Shaun Broderick
 - Jeffrey España 
 - Shaun Broderick
