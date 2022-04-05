@@ -64,17 +64,18 @@ export class ProductItemComponent implements OnInit {
   }
 
   onClick(){
+    if(!this.user.isUserLoggedIn())
+    {
+      this.router.navigateByUrl("login")
+    } else {
     this.cartService.addItem(this.productItem)
     if (this.orderCount > 1)
     {
       this.cartService.increaseQuantity(this.productItem, this.orderCount)
     }
     this.orderCount = 0
-    if(!this.user.isUserLoggedIn())
-    {
-      this.router.navigateByUrl("login")
-    }
     this.router.navigateByUrl("productList");
   }
+}
 
 }
