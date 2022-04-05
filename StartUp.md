@@ -8,7 +8,7 @@
 For local development, please visit this link to set up your development environment before building this project.
 
 ## Cloning & Building
-Once you have Angular CLI and the appropriate JDK(s) installed, clone the RevLoot repo locally. Cloning instructions can be found here.
+Once you have Angular CLI and the appropriate JDK(s) installed, clone the RevLoot repo locally. Cloning instructions can be found [here](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository).
 
 You would want to restore dependencies or install yourself, in order to avoid dependency errors. 
 
