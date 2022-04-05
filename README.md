@@ -27,12 +27,14 @@ Revloot provides users the ability to set up an account, and store login details
 + Login
 - Register for account
 * Display Products
-Search for Products
-Quantity Select
-Shopping Cart
-Checkout
-Password hashing
-Jenkins
-H2 Database
-Mockaroo
++ Search for Products
+- Quantity Select
+* Shopping Cart
+* Checkout
+* Password hashing
+* Jenkins
+* H2 Database
+* Mockaroo
+
+
 
