@@ -8,16 +8,16 @@ Revloot provides users the ability to set up an account, and store login details
 ## Technologies Used
 **Frontend**
 
-... -Javascript
-... -HTML
-... -CSS
-... -Bootstrap 5.1 & Bootstrap Icons
-... -Angular CLI  version 13.2.5
+-Javascript
+-HTML
+-CSS
+-Bootstrap 5.1 & Bootstrap Icons
+-Angular CLI  version 13.2.5
 
 **Backend**
 
-... -Spring Boot
-... -RDBC
-... -Hibernate
-... -Intellij Version: 2021.3.3
+-Spring Boot
+-RDBC
+-Hibernate
+-Intellij Version: 2021.3.3
 
