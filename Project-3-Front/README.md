@@ -1,4 +1,4 @@
-# RevLoot Front-End  (https://img.shields.io/github/stars/sm8192/REVLoot-Front-End?style=flat-square)
+# RevLoot Front-End  <img src="https://img.shields.io/github/stars/sm8192/REVLoot-Front-End?style=flat-square"/>
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.5.
 
