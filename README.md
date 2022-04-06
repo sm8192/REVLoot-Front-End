@@ -85,7 +85,10 @@ alt="User Login"
  width="200"/> <img src="https://media.discordapp.net/attachments/958083396385529946/959182281371709470/unknown.png?width=1265&height=606"
  alt="Search Result"
  style="float: left; margin-right: 10px"
- width="200"/> 
+ width="200"/> <img src="https://media.discordapp.net/attachments/958080472615899188/961282549760544778/unknown.png"
+ alt="User Table ERD"
+ style="float: left; margin-right: 10px"
+  width="200"/>                  
 
 
 # Collaborators  <img src="https://img.shields.io/badge/RevLoot-Team-orange"/>
