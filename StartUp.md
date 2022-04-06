@@ -10,7 +10,8 @@ For local development, please visit the following: [link](https://www.jetbrains.
 ## Cloning & Building <img src="https://img.shields.io/badge/RevLoot-Build-success"/>
 Once you have Angular CLI and the appropriate JDK(s) installed, clone the RevLoot repo locally. Cloning instructions can be found [here](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository).
 
-<img src="https://img.shields.io/badge/RevLoot-Note-red"/> You would want to restore dependencies or install dependencies yourself, in order to avoid any dependency errors. 
+<img src="https://img.shields.io/badge/RevLoot-Note-red"/>   
+You would want to restore dependencies or install dependencies yourself, in order to avoid any dependency errors. 
 
 REVLoot Front-End and Back-End:  
 https://github.com/sm8192/REVLoot-Front-End.git  
