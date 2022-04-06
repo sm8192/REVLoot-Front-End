@@ -18,7 +18,7 @@ export class RegisterComponent implements OnInit {
   }
 
 
-onSubmit(data: any){//does not do anything yet just put it here to get rid of errors in html-william
+onSubmit(data: any){
   let values = data.form.value;
   let user: User = {firstName: values.firstName, lastName: values.lastName, email: values.email, password: values.password}
   console.log(user);
