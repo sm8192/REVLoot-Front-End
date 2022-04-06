@@ -92,9 +92,9 @@ alt="User Login"
 
 
 # Collaborators  <img src="https://img.shields.io/badge/RevLoot-Team-orange"/>
-*Scrum Master - Shane Moorhead*
+*Scrum Master - Shane Moorhead*  :man_technologist:  
 
-**Team I:** Login / Register
+**Team I:** Login / Register  :desktop_computer:  
  Team lead : Vivian Anderson
 - Alexander Seith
 - Angeudy Brisita
@@ -102,7 +102,7 @@ alt="User Login"
 - John Berger
 - William Fuente
 
-**Team II:** Display Products / Search Products / Quantity Select
+**Team II:** Display Products / Search Products / Quantity Select  :shopping:    
 Team lead :Christian Gonzalez
 - Shawn Boutte
 - Elliot Culbertson
@@ -110,13 +110,13 @@ Team lead :Christian Gonzalez
 - John Atillo
 - John Ngan
 
-**Team III:** Checkout / Cart
+**Team III:** Checkout / Cart  :shopping_cart:  
 Team lead : Michael Butera
 - Nikhil pradeep
 - Curtis Morris
 - Hunter Melcher
 
-**Team IV:** Startup Documentation / General Documentation  
+**Team IV:** Startup Documentation / General Documentation  :pencil:  
 Team lead : Shaun Broderick
 - Jeffrey España 
 - Shaun Broderick
